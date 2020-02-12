@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   name1;
   age;
   loading = false;
+  loading2 = false;
   buttionText = "Senda skilaboð";
+  buttionText2 = "Senda skilaboð";
 
   emailFormControl = new FormControl("", [
     Validators.required,
@@ -86,8 +88,8 @@ export class LoginComponent implements OnInit {
   }
 
   register2() {
-    this.loading = true;
-    this.buttionText = "Submiting...";
+    this.loading2 = true;
+    this.buttionText2 = "Submiting...";
     let user = {
       verk: "Beiðni um einkaþjálfun",
       name: this.nameFormControl2.value,
@@ -103,11 +105,11 @@ export class LoginComponent implements OnInit {
       },
       err => {
         console.log(err);
-        this.loading = false;
-        this.buttionText = "Submit";
+        this.loading2 = false;
+        this.buttionText2 = "Submit";
       },() => {
-        this.loading = false;
-        this.buttionText = "Submit";
+        this.loading2 = false;
+        this.buttionText2 = "Submit";
       }
     );
   }
