@@ -6,7 +6,7 @@
             <div class="col-md-6 col-lg-6 col-sm-12">
               <h2>Umsókn í fjarþjálfun</h2>  
               <div class="footer-right-area wow fadeIn">
-                <form style="width: 100%; margin: auto">
+                <form style="width: 100%; margin: auto" id="myForm">
                   <mat-card>
                     <h1>Fjarþjálfun</h1>
                     <mat-form-field style="width: 80%">
@@ -39,7 +39,7 @@
                       </mat-error>
                     </mat-form-field>
                     <br />
-                    <button
+                    <button id="myBtn"
                       mat-raised-button
                       [disabled]="emailFormControl.invalid || nameFormControl.invalid || ageFormControl.invalid || loading"
                       color="primary"

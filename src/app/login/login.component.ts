@@ -84,7 +84,12 @@ export class LoginComponent implements OnInit {
         this.loading = false;
         this.buttionText = "Submit";
       }
-    );
+    )
+
+    this.nameFormControl.reset();
+    this.ageFormControl.reset();
+    this.emailFormControl.reset();
+
   }
 
   register2() {
@@ -112,6 +117,10 @@ export class LoginComponent implements OnInit {
         this.buttionText2 = "Submit";
       }
     );
+
+    this.nameFormControl2.reset();
+    this.ageFormControl2.reset();
+    this.emailFormControl2.reset();
   }
 }
 
