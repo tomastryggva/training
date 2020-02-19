@@ -11,4 +11,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 This app was created as a project for a up and coming personal trainer. The app features an about, price, submit-form and location sections.
 
 ## Build
-![Image description](\src\assets\img\home-prev.PNG)
+![Image description](src/assets/img/home-prev.PNG)
