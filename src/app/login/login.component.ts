@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
       email: this.emailFormControl.value,
       age: this.ageFormControl.value
     }
-    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+    this.http.sendEmail("https://lightweight-email.herokuapp.com/", user).subscribe(
       data => {
         let res:any = data; 
         console.log(
@@ -101,7 +101,7 @@ export class LoginComponent implements OnInit {
       email: this.emailFormControl2.value,
       age: this.ageFormControl2.value
     }
-    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+    this.http.sendEmail("https://lightweight-email.herokuapp.com/", user).subscribe(
       data => {
         let res:any = data; 
         console.log(
