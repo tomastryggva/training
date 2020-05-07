@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from "@angular/forms";
 import { HttpService } from "../http.service";
+import { HttpClient } from "@angular/common/http";
 
 
 @Component({
@@ -9,6 +10,23 @@ import { HttpService } from "../http.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  validVerd: string;
+  verd: string[] = ['30.000kr', '40.000kr', '50.000kr'];
+  verdControl = new FormControl('', [Validators.required]);
+
+  maeling: string;
+  maelingValin: string[] = ['Mæling', 'Ekki mæling'];
+  maelingControl = new FormControl('', [Validators.required]);
+
+
+  divs = ["1", "2", "3"];
+  options = ["opt1", "opt2", "opt3"];
+  
+  print(value_of , value) {
+    console.log('value of' , value_of , 'is' , value );
+ }
+
   image =
     "https://images.freeimages.com/images/large-previews/7bc/bald-eagle-1-1400106.jpg";
   name1;
@@ -69,8 +87,10 @@ export class LoginComponent implements OnInit {
       email: this.emailFormControl.value,
       age: this.ageFormControl.value
     }
-    this.http.sendEmail("https://lightweight-email.herokuapp.com/sendmail", user).subscribe(
+
+    this.http.sendEmail("http://localhost:3000/sendmail", user ).subscribe(
       data => {
+        console.log("HELLO!");
         let res:any = data; 
         console.log(
           `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
@@ -92,6 +112,19 @@ export class LoginComponent implements OnInit {
 
   }
 
+  imageUrl : string = "/assets/img/imgg.png";
+  fileToUpload : File = null;
+
+  handleFileInput(file : FileList){
+    this.fileToUpload = file.item(0);
+
+    var reader = new FileReader();
+    reader.onload = (event:any) => {
+      this.imageUrl = event.target.result;
+    }
+    reader.readAsDataURL(this.fileToUpload);
+  }
+
   register2() {
     this.loading2 = true;
     this.buttionText2 = "Submiting...";
@@ -99,13 +132,16 @@ export class LoginComponent implements OnInit {
       verk: "Beiðni um einkaþjálfun",
       name: this.nameFormControl2.value,
       email: this.emailFormControl2.value,
-      age: this.ageFormControl2.value
+      age: this.ageFormControl2.value,
+      verd: this.validVerd,
+      image: this.imageUrl
     }
-    this.http.sendEmail("https://lightweight-email.herokuapp.com/sendmail", user).subscribe(
+    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
       data => {
+        console.log("HELLO!");
         let res:any = data; 
         console.log(
-          `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
+          `👏 > 👏 > 👏 > 👏 ${user.verd} is successfully register and mail has been sent and the message id is ${res.messageId}`
         );
       },
       err => {

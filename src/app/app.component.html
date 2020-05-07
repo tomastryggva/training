@@ -2,7 +2,7 @@
     <!-- Header Area wrapper Starts -->
     <header id="header-wrap">
       <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo top-nav-collapse">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -36,6 +36,12 @@
                   Skrá mig
                 </a>
               </li>
+              <li>
+                <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
+              </li>
+              <li>
+                <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -60,8 +66,8 @@
       <!-- Navbar End -->
 
       <!-- Hero Area Start -->
-      <div id="hero-area" class="hero-area-bg">
-        <div class="overlay"></div>
+      <div id="hero-area" class="hero-area-bg container">
+        <div class="overlay "></div>
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 text-center">
@@ -70,7 +76,7 @@
                 <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Agnar Tryggvason</h2>
                 <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Einkaþjálfari</p>
                 <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
-                  <li>
+                 <!-- <li>
                     <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
                   </li>
                   <li>
@@ -84,7 +90,7 @@
                   </li>
                   <li>
                     <a class="google" href="#"><i class="icon-social-google"></i></a>
-                  </li>
+                  </li>>-->
                 </ul>
                 <!--<div class="header-button wow fadeInUp" data-wow-delay="1s">
                   <a href="#contact" class="btn btn-common">Skrá mig</a>
@@ -99,6 +105,7 @@
     </header>
     <!-- Header Area wrapper End -->
     <section id="services" class="services section-padding2">
+      <div class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-3 col-xs-12">
@@ -106,9 +113,8 @@
               <div class="icon">
                 <i class="icon-grid"></i>
               </div>
-              <div class="services-content">
+              <div class="services-content nav-item active">
                 <h3><a class="nav-link" href="#about">Um mig  </a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
               </div>
             </div>
           </div>
@@ -117,9 +123,8 @@
               <div class="icon">
                 <i class="icon-layers"></i>
               </div>
-              <div class="services-content">
+              <div class="services-content nav-item">
                 <h3><a class="nav-link" href="#resume">Verðskrá</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
               </div>
             </div>
           </div>
@@ -129,9 +134,10 @@
               <div class="icon">
                 <i class="icon-briefcase"></i>
               </div>
-              <div class="services-content">
-                <h3><a href="#">Þjálfun</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
+              <div class="services-content nav-item">
+                <h3><a class="nav-link" href="#contact">
+                  Þjálfun
+                </a></h3>
               </div>
             </div>
           </div>
@@ -141,19 +147,19 @@
               <div class="icon">
                 <i class="icon-bubbles"></i>
               </div>
-              <div class="services-content">
+              <div class="services-content nav-item">
                 <h3><a class="nav-link" href="#contact">
                   Skrá mig
                 </a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
               </div>
             </div>
           </div>
         </div>
+        </div>
       </div>
     </section>
     <!-- About Section Start -->
-    <section id="about" class="section-padding">
+    <section id="about" class="about section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -263,33 +269,47 @@
     
     <!-- Portfolio Section Ends --> 
     <!-- Counter Area Start-->
-    <section id="resume" class="counter-section section-padding">
+    <section id="resume" class="resume counter-section section-padding">
+      <div class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.9s">
-              <div class="icon"><p>Fjarþjálfun</p></div>
-              <div class="counterUp">15.000</div>
-              <p>ISK kr. Á mán pr. einstakling</p>
-            </div>
+          <h2 style="text-align:center">Verðskrá fyrir bæði Fjarþjálfun og Einkaþjálfun</h2>
+          <p style="text-align:center">Agnar áskilur sér réttinn til að breyta verðum án fyrirvara</p>
+          
+          <div class="columns">
+            <ul class="price">
+              <li class="header">Fjarþjálfun</li>
+              <li class="grey">14.000 eða 17.000 kr.-</li>
+              <li>Æfingaáætlun</li>
+              <li>Mataræði</li>
+              <li>Mælingar*(3.000kr-)</li>
+              <li>Eftirfylgni</li>
+              <li class="grey nav-link"><a href="#contact" class="button">Skrá mig</a></li>
+            </ul>
           </div>
-          <!-- Counter Item -->
-          <div class="col-md-6 col-sm-2 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.9s">
-              <div class="icon"><p>Einkaþjálfun</p></div>
-              <div class="counterUp">65.000</div>
-              <p>ISK kr. Á mán pr. einstakling</p>
-            </div>
+          
+          <div class="columns">
+            <ul class="price">
+              <li class="header">Einkaþjálfun</li>
+              <li class="grey">30.000 til 55.000 kr.-</li>
+              <li>Allt úr Fjarþjálfun*</li>
+              <li>...</li>
+              <li>...</li>
+              <li>2x í viku: <b>30.000kr</b>
+                |  3x í viku: <b>40.000kr</b>
+                |  4x í viku: <b>55.000kr</b></li>
+              <li class="grey nav-link"><a href="#contact" class="button">Skrá mig</a></li>
+            </ul>
           </div>
-          <!-- Counter Item -->
-        </div>
       </div>
+    </div>
+      
+      
     </section>
     <!-- Counter Area End-->
 
     <router-outlet></router-outlet>
     <!-- Footer Section Start -->
-    <footer class="footer-area section-padding">
+    <footer class="footer-area section-padding2">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -299,19 +319,20 @@
                   <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
                 </li>
                 <li>
+                  <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
+                </li>
+                 <!--                 <li>
                   <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
                 </li>
                 <li>
-                  <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-linkedin"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-google"></i></a>
-                </li>
+                    <a class="linkedin" href="#"><i class="icon-social-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a class="google" href="#"><i class="icon-social-google"></i></a>
+                  </li>>-->
               </ul>
-              <p>Copyright © 2020 Lightweight All Right Reserved</p>
+              <p>Copyright © 2020 Lightweight All Right Reserved <br />
+              Vefhönnuður: Tómas Tryggvason</p>
             </div>
           </div>
         </div>

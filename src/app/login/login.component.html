@@ -1,5 +1,5 @@
     <!-- Contact Section Start -->
-    <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding2">
       <div class="contact-form">
         <div class="container">
           <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">        
@@ -9,36 +9,60 @@
                 <form style="width: 100%; margin: auto" id="myForm">
                   <mat-card>
                     <h1>Fjarþjálfun</h1>
+
+                    
+                  <!--   <mat-radio-group
+                      aria-labelledby="example-radio-group-label"
+                      class="radio-group"
+                      [(ngModel)]="maeling"
+                      [formControl]="maelingControl">
+                      
+                      <mat-radio-button class="radio-button"
+                        *ngFor="let maelingValins of maelingValin" 
+                        [value]="maelingValins" >
+                        {{ maelingValins }}
+                      </mat-radio-button>
+
+                    </mat-radio-group>
+                    <mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>
+                    <div class="askrift" *ngIf="maeling">Þú hefur valið áskrift með <b>{{ maeling }}</b></div>-->
+
                     <mat-form-field style="width: 80%">
-                      <input matInput placeholder="Name" [formControl]="nameFormControl" />
+                      <input matInput placeholder="Nafn" [formControl]="nameFormControl" />
                       <mat-error *ngIf="nameFormControl.hasError('minlength')">
-                        Name must be at least 2 characters long.
+                        Skrá fullt nafn
                       </mat-error>
                       <mat-error *ngIf="nameFormControl.hasError('required')">
-                        Name is <strong>required</strong>
+                        Nafn <strong>verður</strong> að vera
                       </mat-error>
                     </mat-form-field>
                     <br />
                     <mat-form-field style="width: 80%">
-                      <input matInput placeholder="Age" [formControl]="ageFormControl" />
+                      <input matInput placeholder="Aldur" [formControl]="ageFormControl" />
                       <mat-error *ngIf="ageFormControl.hasError('minlength')">
-                        Age must be 18+
+                        Lágmarks aldur er 16 ára
                       </mat-error>
                       <mat-error *ngIf="ageFormControl.hasError('required')">
-                        Age is <strong>required</strong>
+                        Aldur <strong>verður</strong> að vera
                       </mat-error>
                     </mat-form-field>
                     <br />
                     <mat-form-field style="width: 80%">
-                      <input matInput placeholder="Email" [formControl]="emailFormControl"/>
+                      <input matInput placeholder="Netfang" [formControl]="emailFormControl"/>
                       <mat-error *ngIf="emailFormControl.hasError('email')">
-                        Please enter a valid email address
+                        Skráðu inn þitt netfang
                       </mat-error>
                       <mat-error *ngIf="emailFormControl.hasError('required')">
-                        Email is <strong>required</strong>
+                        Netfang <strong>verður</strong> að vera
                       </mat-error>
                     </mat-form-field>
                     <br />
+                    <form #imageForm=ngForm>
+                      <img [src]="imageUrl" style="width:130px;height:100px">
+                      <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+                    </form>
+  
+                      <br />
                     <button id="myBtn"
                       mat-raised-button
                       [disabled]="emailFormControl.invalid || nameFormControl.invalid || ageFormControl.invalid || loading"
@@ -52,39 +76,6 @@
               </div>
             </div>
 
-                <!--<form id="contactForm">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nafn" required data-error="Please enter your name">
-                        <div class="help-block with-errors"></div>
-                      </div>                                 
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="text" placeholder="Netfang" id="email" class="form-control" name="email" required data-error="Please enter your email">                        <div class="help-block with-errors"></div>
-                      </div> 
-                    </div>
-                     <div class="col-md-12">
-                      <div class="form-group">
-                        <input type="text" placeholder="Viðfangsefni" id="msg_subject" class="form-control" required data-error="Please enter your subject">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group"> 
-                        <textarea class="form-control" id="message" placeholder="Þín skilaboð" rows="5" data-error="Write your message" required></textarea>
-                        <div class="help-block with-errors"></div>
-                      </div>
-                      <div class="submit-button">
-                        <button class="btn btn-common" id="submit" type="submit">Senda skilaboð</button>
-                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                        <div class="clearfix"></div> 
-                      </div>
-                    </div>
-                  </div>            
-                </form>-->
-
             <router-outlet></router-outlet>
             <div class="col-md-6 col-lg-6 col-sm-12">
               <div class="footer-right-area wow fadeIn">
@@ -92,39 +83,71 @@
                 <form style="width: 100%; margin: auto">
                   <mat-card>
                     <h1>Einkaþjálfun</h1>
+
+                    
+                    <mat-radio-group
+                      aria-labelledby="example-radio-group-label"
+                      class="radio-group"
+                      [(ngModel)]="validVerd"
+                      [formControl]="verdControl">
+                      
+                      <mat-radio-button class="radio-button"
+                        *ngFor="let verds of verd" 
+                        [value]="verds" >
+                        {{ verds }}
+                      </mat-radio-button>
+
+                    </mat-radio-group>
+                   <!-- <mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>-->
+                    <div class="askrift" *ngIf="validVerd">Þú hefur valið áskrift andvirði: <b>{{ validVerd }}</b></div>
+
+                    <!--<div ng-app="ngAnimate">
+                    Show: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br />
+                    <div class="check-element animate-show-hide" ng-show="checked">
+                      I show up when your checkbox is checked.
+                    </div>
+                  </div>-->
+
                     <mat-form-field style="width: 80%">
-                      <input matInput placeholder="Name" [formControl]="nameFormControl2" />
+                      <input matInput placeholder="Nafn" [formControl]="nameFormControl2" />
                       <mat-error *ngIf="nameFormControl2.hasError('minlength')">
-                        Name must be at least 2 characters long.
+                        Skrá fullt nafn
                       </mat-error>
                       <mat-error *ngIf="nameFormControl2.hasError('required')">
-                        Name is <strong>required</strong>
+                        Nafn <strong>verður</strong> að vera
                       </mat-error>
                     </mat-form-field>
                     <br />
                     <mat-form-field style="width: 80%">
-                      <input matInput placeholder="Age" [formControl]="ageFormControl2" />
+                      <input matInput placeholder="Aldur" [formControl]="ageFormControl2" />
                       <mat-error *ngIf="ageFormControl2.hasError('minlength')">
-                        Age must be 18+
+                        Lágmarks aldur er 16 ára
                       </mat-error>
                       <mat-error *ngIf="ageFormControl2.hasError('required')">
-                        Age is <strong>required</strong>
+                        Aldur <strong>verður</strong> að vera
                       </mat-error>
                     </mat-form-field>
                     <br />
                     <mat-form-field style="width: 80%">
-                      <input matInput placeholder="Email" [formControl]="emailFormControl2"/>
+                      <input matInput placeholder="Netfang" [formControl]="emailFormControl2"/>
                       <mat-error *ngIf="emailFormControl2.hasError('email')">
-                        Please enter a valid email address
+                        Skráðu inn þitt netfang
                       </mat-error>
                       <mat-error *ngIf="emailFormControl2.hasError('required')">
-                        Email is <strong>required</strong>
+                        Netfang <strong>verður</strong> að vera
                       </mat-error>
                     </mat-form-field>
+                    <br />
+
+                  <form #imageForm=ngForm>
+                    <img [src]="imageUrl" style="width:130px;height:100px">
+                    <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+                  </form>
+
                     <br />
                     <button
                       mat-raised-button
-                      [disabled]="emailFormControl2.invalid || nameFormControl2.invalid || ageFormControl2.invalid || loading2"
+                      [disabled]="emailFormControl2.invalid || nameFormControl2.invalid || verdControl.invalid || ageFormControl2.invalid || loading2"
                       color="primary"
                       (click)="register2()"
                     >
@@ -134,88 +157,12 @@
                 </form>
               </div>
             </div>
-
-            <!--<div class="col-md-6 col-lg-6 col-sm-12">
-              <div class="footer-right-area wow fadeIn">
-                <h2>Hafa samband</h2>
-                <div class="footer-right-contact">
-                  <div class="single-contact">
-                    <div class="contact-icon">
-                      <i class="fa fa-map-marker"></i>
-                    </div>
-                    <p>Reykjavík</p>
-                  </div>
-                  <div class="single-contact">
-                    <div class="contact-icon">
-                      <i class="fa fa-envelope"></i>
-                    </div>
-                    <p><a href="mailto:tomsaulnier@gmail.com">email@example.com</a></p>
-                  </div>
-                  <div class="single-contact">
-                    <div class="contact-icon">
-                      <i class="fa fa-phone"></i>
-                    </div>
-                    <p><a href="#">866 1910</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>-->
             <div class="col-md-12">
             <object style="padding-top:60px; border:0; height: 500px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.9350516946408!2d-21.881000083473733!3d64.14508518359455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674ea917b6645%3A0xd45bed37d4c41289!2sWorld%20Class!5e0!3m2!1sen!2sis!4v1580862479850!5m2!1sen!2sis"></object>
             </div>
           </div>
         </div>
-      </div>   
+      </div>  
+
+    
     </section>
-    <!-- Contact Section End -->
-
-
-
-<!-- Header Area wrapper Starts 
-<h1>Fjarþjálfun Agnars</h1>
-
-<form style="width: 50%; margin: auto">
-  <mat-card>
-    <h1>Skráðu þig í fjarþjálfun</h1>
-
-    <mat-form-field style="width: 50%">
-      <input matInput placeholder="Name" [formControl]="nameFormControl" />
-      <mat-error *ngIf="nameFormControl.hasError('minlength')">
-        Name must be at least 2 characters long.
-      </mat-error>
-      <mat-error *ngIf="nameFormControl.hasError('required')">
-        Name is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-    <br />
-    <mat-form-field style="width: 50%">
-      <input matInput placeholder="Age" [formControl]="ageFormControl" />
-      <mat-error *ngIf="ageFormControl.hasError('minlength')">
-        Age must be 18+
-      </mat-error>
-      <mat-error *ngIf="ageFormControl.hasError('required')">
-        Age is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-    <br />
-    <mat-form-field style="width: 50%">
-      <input matInput placeholder="Email" [formControl]="emailFormControl"/>
-      <mat-error *ngIf="emailFormControl.hasError('email')">
-        Please enter a valid email address
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-    <br />
-    <button
-      mat-raised-button
-      [disabled]="emailFormControl.invalid || nameFormControl.invalid || ageFormControl.invalid || loading"
-      color="primary"
-      (click)="register()"
-    >
-      {{buttionText}}
-    </button>
-  </mat-card>
-</form>
--->
