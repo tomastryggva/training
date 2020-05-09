@@ -88,7 +88,7 @@ export class LoginComponent implements OnInit {
       age: this.ageFormControl.value
     }
 
-    this.http.sendEmail("http://localhost:3000/sendmail", user ).subscribe(
+    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user ).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
@@ -136,7 +136,7 @@ export class LoginComponent implements OnInit {
       verd: this.validVerd,
       image: this.imageUrl
     }
-    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
