@@ -11,7 +11,7 @@
                     <h1>Fjarþjálfun</h1>
 
                     
-                  <!--   <mat-radio-group
+                     <mat-radio-group
                       aria-labelledby="example-radio-group-label"
                       class="radio-group"
                       [(ngModel)]="maeling"
@@ -24,8 +24,10 @@
                       </mat-radio-button>
 
                     </mat-radio-group>
-                    <mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>
-                    <div class="askrift" *ngIf="maeling">Þú hefur valið áskrift með <b>{{ maeling }}</b></div>-->
+                    <!--<mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>-->
+                    <div class="askrift" *ngIf="maeling === 'með mælingu'">Þú hefur valið áskrift <b>{{ maeling }}</b><p>14.000kr</p></div>
+                    <div class="askrift" *ngIf="maeling === 'án mælingu'">Þú hefur valið áskrift <b>{{ maeling }}</b><p>17.000kr</p></div>
+
 
                     <mat-form-field style="width: 80%">
                       <input matInput placeholder="Nafn" [formControl]="nameFormControl" />
@@ -59,18 +61,24 @@
                     <br />
                     <form #imageForm=ngForm>
                       <img [src]="imageUrl" style="width:130px;height:100px">
-                      <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+                      <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)" [formControl]="myndControl">
                     </form>
   
                       <br />
                     <button id="myBtn"
                       mat-raised-button
-                      [disabled]="emailFormControl.invalid || nameFormControl.invalid || ageFormControl.invalid || loading"
+                      [disabled]="emailFormControl.invalid || 
+                      nameFormControl.invalid || 
+                      maelingControl.invalid ||
+                      ageFormControl.invalid || 
+                      myndControl.invalid ||
+                      loading"
                       color="primary"
                       (click)="register()"
                     >
                       {{buttionText}}
                     </button>
+                    <p>{{stadan1}}</p>
                   </mat-card>
                 </form>
               </div>
@@ -99,7 +107,9 @@
 
                     </mat-radio-group>
                    <!-- <mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>-->
-                    <div class="askrift" *ngIf="validVerd">Þú hefur valið áskrift andvirði: <b>{{ validVerd }}</b></div>
+                    <div class="askrift" *ngIf="validVerd === '1-3x í viku'">Þú hefur valið áskrift að andvirði: <b>50.000kr</b> <p>{{ validVerd }}</p></div>
+                    <div class="askrift" *ngIf="validVerd === '4x í viku'">Þú hefur valið áskrift að andvirði: <b>65.000kr</b> <p>{{ validVerd }}</p></div>
+                    <div class="askrift" *ngIf="validVerd === '5x í viku'">Þú hefur valið áskrift að andvirði: <b>80.000kr</b> <p>{{ validVerd }}</p></div>
 
                     <!--<div ng-app="ngAnimate">
                     Show: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br />
@@ -140,19 +150,25 @@
                     <br />
 
                   <form #imageForm=ngForm>
-                    <img [src]="imageUrl" style="width:130px;height:100px">
-                    <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+                    <img [src]="imageUrl2" style="width:130px;height:100px">
+                    <input type="file" #Image accept="image/*" (change)="handleFileInput2($event.target.files)" [formControl]="myndControl2">
                   </form>
 
                     <br />
                     <button
                       mat-raised-button
-                      [disabled]="emailFormControl2.invalid || nameFormControl2.invalid || verdControl.invalid || ageFormControl2.invalid || loading2"
+                      [disabled]="emailFormControl2.invalid || 
+                      nameFormControl2.invalid || 
+                      verdControl.invalid || 
+                      ageFormControl2.invalid || 
+                      myndControl2.invalid ||
+                      loading2"
                       color="primary"
                       (click)="register2()"
                     >
                       {{buttionText2}}
                     </button>
+                    <p>{{stadan2}}</p>
                   </mat-card>
                 </form>
               </div>

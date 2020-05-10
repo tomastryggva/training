@@ -12,12 +12,15 @@ import { HttpClient } from "@angular/common/http";
 export class LoginComponent implements OnInit {
 
   validVerd: string;
-  verd: string[] = ['30.000kr', '40.000kr', '50.000kr'];
+  verd: string[] = ['1-3x í viku', '4x í viku', '5x í viku'];
   verdControl = new FormControl('', [Validators.required]);
 
   maeling: string;
-  maelingValin: string[] = ['Mæling', 'Ekki mæling'];
+  maelingValin: string[] = ['með mælingu', 'án mælingu'];
   maelingControl = new FormControl('', [Validators.required]);
+
+  myndControl = new FormControl('', [Validators.required]);
+  myndControl2 = new FormControl('', [Validators.required]);
 
 
   divs = ["1", "2", "3"];
@@ -33,8 +36,11 @@ export class LoginComponent implements OnInit {
   age;
   loading = false;
   loading2 = false;
-  buttionText = "Senda skilaboð";
-  buttionText2 = "Senda skilaboð";
+  buttionText = "Senda umsókn";
+  buttionText2 = "Senda umsókn";
+  buttionText22 = "Senda umsókn";
+  stadan1 = 'Test Test';
+  stadan2  = "Test Test";
 
   emailFormControl = new FormControl("", [
     Validators.required,
@@ -78,40 +84,6 @@ export class LoginComponent implements OnInit {
       "https://images.pexels.com/photos/635529/pexels-photo-635529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
   }
 
-  register() {
-    this.loading = true;
-    this.buttionText = "Submiting...";
-    let user = {
-      verk: "Beiðni um fjarþjálfun",
-      name: this.nameFormControl.value,
-      email: this.emailFormControl.value,
-      age: this.ageFormControl.value
-    }
-
-    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user ).subscribe(
-      data => {
-        console.log("HELLO!");
-        let res:any = data; 
-        console.log(
-          `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
-        );
-      },
-      err => {
-        console.log(err);
-        this.loading = false;
-        this.buttionText = "Submit";
-      },() => {
-        this.loading = false;
-        this.buttionText = "Submit";
-      }
-    )
-
-    this.nameFormControl.reset();
-    this.ageFormControl.reset();
-    this.emailFormControl.reset();
-
-  }
-
   imageUrl : string = "/assets/img/imgg.png";
   fileToUpload : File = null;
 
@@ -125,18 +97,74 @@ export class LoginComponent implements OnInit {
     reader.readAsDataURL(this.fileToUpload);
   }
 
+  register() {
+    this.loading = true;
+    this.buttionText = "Umsókn send";
+    let user = {
+      verk: "Beiðni um fjarþjálfun",
+      name: this.nameFormControl.value,
+      email: this.emailFormControl.value,
+      age: this.ageFormControl.value,
+      verd: this.maeling,
+      image: this.imageUrl
+    }
+
+    this.http.sendEmail("http://localhost:8080/sendmailSKEMMA", user ).subscribe(
+      data => {
+        console.log("HELLO!");
+        let res:any = data; 
+        console.log(
+          `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
+        );
+      },
+      err => {
+        console.log(err);
+        this.loading = false;
+        this.buttionText = "Senda umsókn";
+        this.stadan1 = "VILLA - Umsókn mistókst";
+      },() => {
+        this.loading = false;
+        this.buttionText = "Senda umsókn";
+        this.stadan1 = "Umsókn tókst!";
+      }
+    )
+
+    this.nameFormControl.reset();
+    this.ageFormControl.reset();
+    this.emailFormControl.reset();
+    this.maelingControl.reset();
+    this.myndControl.reset();
+
+    this.imageUrl = "/assets/img/imgg.png";
+
+  }
+
+
+  imageUrl2 : string = "/assets/img/imgg.png";
+  fileToUpload2 : File = null;
+
+  handleFileInput2(file : FileList){
+    this.fileToUpload2 = file.item(0);
+
+    var reader = new FileReader();
+    reader.onload = (event:any) => {
+      this.imageUrl2 = event.target.result;
+    }
+    reader.readAsDataURL(this.fileToUpload2);
+  }
+
   register2() {
     this.loading2 = true;
-    this.buttionText2 = "Submiting...";
+    this.buttionText2 = "Umsókn sendist...";
     let user = {
       verk: "Beiðni um einkaþjálfun",
       name: this.nameFormControl2.value,
       email: this.emailFormControl2.value,
       age: this.ageFormControl2.value,
       verd: this.validVerd,
-      image: this.imageUrl
+      image: this.imageUrl2
     }
-    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user).subscribe(
+    this.http.sendEmail("http://localhost:8080/sendmailSKEMMA", user).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
@@ -147,16 +175,23 @@ export class LoginComponent implements OnInit {
       err => {
         console.log(err);
         this.loading2 = false;
-        this.buttionText2 = "Submit";
+        this.buttionText2 = "Senda umsókn";
+        this.stadan2 = "VILLA - Umsókn mistókst";
       },() => {
         this.loading2 = false;
-        this.buttionText2 = "Submit";
+        this.buttionText2 = "Senda umsókn";
+        this.stadan2 = "Umsókn tókst!";
       }
     );
+    
 
     this.nameFormControl2.reset();
     this.ageFormControl2.reset();
     this.emailFormControl2.reset();
+    this.verdControl.reset();
+    this.myndControl2.reset();
+
+    this.imageUrl2 = "/assets/img/imgg.png";
   }
 }
 
