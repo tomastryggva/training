@@ -772,7 +772,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   content: ':';
   color: #040404;
   font-size: 14px;
-  left: 77px;
+  left: 85px;
 }
 
 .about-profile .admin-sign {
@@ -4386,75 +4386,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
-
-.about-profile{position:relative;margin:20px 0 30px 0}.about-profile .pro-title{font-weight:700;color:#040404;position:relative;width:120px;display:inline-block;margin-bottom:5px}.about-profile .pro-title:after{position:absolute;content:':';color:#040404;font-size:14px;left:77px}.about-profile .admin-sign{position:absolute;right:45px;bottom:10px}
-
-
-/*
-$primary: rgb(5, 4, 5);
-
-
-body {
-    margin: 0;
-    font-family: 'Nunito', 'sans-serif';
-    font-size: 18px;
-    height: 100%;
-
-}
-
-.container {
-    width: 70%;
-    margin: 0 auto;
-}
-
-header {
-    background: $primary;
-    padding: 1em 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    a.logo {
-        font-weight: bold;
-    }
-
-    nav {
-        float: right;
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            display: flex;
-
-            li a {
-                padding: 1em;
-
-                &:hover {
-                    background: darken($primary, 10%);
-                }
-            }
-        }
-    }
-}
-
-footer {
-    background: $primary;
-    padding: 4em 0;
-    width: 70%;
-    margin: 0 auto;
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    a.logo {
-        font-weight: bold;
-        padding-left: 38%;
-        font-size: 35px;
-    }
-}
-*/
