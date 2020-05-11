@@ -741,7 +741,12 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .profile-wrapper {
-  padding: 45px 0;
+  padding: 5px 0;
+}
+
+.profile-wrapper b, p{
+  color: white;
+  font-size: 18px;
 }
 
 .profile-wrapper .btn {
@@ -758,21 +763,28 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin: 20px 0 20px 0;
 }
 
+.pro-detail {
+  color: white;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
 .about-profile .pro-title {
   font-weight: 700;
-  color: #040404;
+  color: white;
   position: relative;
   width: 120px;
   display: inline-block;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .about-profile .pro-title:after {
   position: absolute;
   content: ':';
-  color: #040404;
+  color: white;
   font-size: 14px;
-  left: 85px;
+  left: 130px;
 }
 
 .about-profile .admin-sign {
@@ -782,7 +794,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .counter-section {
-  //background: url(../src/assets/img/background/weight.jpg);
   height: 900px;
 
 }
@@ -959,8 +970,9 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .navbar-brand {
-  position: relative;
-  padding: 0px;
+  height: auto;
+  width: auto;
+  max-width: 250px;
 }
 
 .top-nav-collapse {
@@ -975,7 +987,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  background: black !important;
+  background: #121212 !important;
 }
 
 .top-nav-collapse .navbar-brand {
@@ -983,7 +995,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .top-nav-collapse .navbar-brand img {
-  width: 65%;
+  width: 42%;
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
@@ -994,11 +1006,11 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
   cursor: pointer;
-  color: green !important;
+  color: #1d6734 !important;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: green !important;
+  color: #1d6734 !important;
 }
 
 .indigo {
@@ -1025,10 +1037,10 @@ a.back-to-top:hover, a.back-to-top:focus {
 .navbar-expand-lg .navbar-nav .nav-link {
   color: #333;
   font-weight: 700;
+  font-size: 18px;
   padding: 0 17px;
   margin-top: 15px;
   margin-bottom: 15px;
-  line-height: 40px;
   text-transform: uppercase;
   cursor: pointer;
   background: transparent;
@@ -1405,12 +1417,12 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 /* Services Item */
-.services {
-  background: grey;
+.hallolauf {
+  background: url(../src/assets/img/artwork.jpg);
+  background-size: cover;
 }
 
 .about {
-  background: #F0F0F0;
 }
 
 .biggun {
@@ -1419,7 +1431,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 
 .services-item {
-  background: black;
+  background: #121212;
   border-radius: 4px;
   padding: 48px 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -1438,7 +1450,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   display: block;
   margin: 0 auto;
   height: 48px;
-  color: green;
+  color: #1d6734;
 }
 
 .services-item .services-content h3 {
@@ -1449,7 +1461,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 .services-item .services-content h3 a {
   font-size: 22px;
   text-transform: uppercase;
-  color: green;
+  color: #1d6734;
 }
 
 .services-item .services-content h3 a:hover {
