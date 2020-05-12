@@ -148,9 +148,9 @@
     height: 44px; }
 
     /* only small desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
     #hero-area .contents .head-title {
-      font-size: 1px;
+      font-size: 80px;
     }
     .services-item .services-content h3 a {
       font-size: 14px;
@@ -189,7 +189,7 @@
   }
   
   /* mobile or only mobile */
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     .section-title {
       font-size: 22px;
       margin-bottom: 30px;
@@ -204,7 +204,15 @@
       padding: 100px 0px 60px 0px;
     }
     #hero-area .contents .head-title {
-      font-size: 1px;
+      
+      color: white;
+    }
+    #hero-area .contents .script-font {
+      color: green;
+    }
+    #hero-area .contents .script-fonts {
+      height: 150px;
+      width: 300px;
     }
     #hero-area .contents h5 {
       font-size: 32px;
@@ -1267,11 +1275,10 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 #hero-area .contents .head-title {
-  color: #fff;
-  font-size: 80px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  font-weight: 700;
+  // color: #fff;
+   letter-spacing: 10px;
+   text-transform: uppercase;
+   font-weight: 700;
 }
 
 #hero-area .contents p {
