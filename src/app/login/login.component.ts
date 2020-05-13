@@ -109,7 +109,7 @@ export class LoginComponent implements OnInit {
       image: this.imageUrl
     }
 
-    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user ).subscribe(
+    this.http.sendEmail("VANTAR LOCALHOST", user ).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
@@ -164,7 +164,7 @@ export class LoginComponent implements OnInit {
       verd: this.validVerd,
       image: this.imageUrl2
     }
-    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user).subscribe(
+    this.http.sendEmail("VANTAR LOCALHOST", user).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
