@@ -206,20 +206,8 @@ button:focus {
   background: #3b5999;
 }
 
-.social-icon li .twitter:hover {
-  background: #4A9CEC;
-}
-
 .social-icon li .instagram:hover {
   background: #D6274D;
-}
-
-.social-icon li .linkedin:hover {
-  background: #1260A2;
-}
-
-.social-icon li .google:hover {
-  background: #CE332A;
 }
 
 /* ScrollToTop */
@@ -265,27 +253,12 @@ a.back-to-top:hover, a.back-to-top:focus {
   padding: 30px 0;
 }
 
-.verdTexti {
-  color: white;
-}
-.verdTexti p {
-  color: white;
-}
-
 #about .img-thumb img {
   border: 8px solid green;
   margin-left: 10px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
-
-.meBackground {
-  background-color: white;
-}
-
-.priceBackground {
-  background-color: black;
-}
 
 //Verður að vera hérna, annars virka takkarnir ekki rétt
   .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
@@ -299,20 +272,10 @@ a.back-to-top:hover, a.back-to-top:focus {
     border-color: #422873; /*outer ring color change*/  }
 
 
-/* Resume */
-
 .navbar-brand {
   height: auto;
   width: auto;
   max-width: 250px;
-}
-
-.indigo {
-  background: black; //var white eða #fff
-}
-
-.menu-bg {
-  background: transparent;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link i {
@@ -383,45 +346,17 @@ a.back-to-top:hover, a.back-to-top:focus {
   }
 }
 
-/* ==========================================================================
-3. Hero Area
-========================================================================== */
-
-.hallolauf {
+.mainBackground {
   background: url(../src/assets/img/artwork.jpg);
   background-size: cover;
 }
 
-.services {
+.about, .services, .resume, .contact-form{
   padding: 70px;
 }
 
-.about {
-  padding: 70px;
-}
 
-.resume {
-  padding: 70px;
-}
-
-.contact-form {
-  padding: 70px;
-}
-
-/* ==========================================================================
-  Portfolio Section
-   ========================================================================== */
-
-a:not([href]):not([tabindex]) {
-  color: #fff;
-}
-
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: #fff;
-}
-
-
-//herna byrjar stuff(Ef delete stoppa hreyfingar)
+//herna byrjar stuff(Ef delete, þá stoppa hreyfingar)
 
 .animated {
   -webkit-animation-duration: 1s;

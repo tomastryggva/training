@@ -55,6 +55,10 @@
   letter-spacing: 0.1rem;
 }
 
+.indigo {
+  background: black;
+}
+
 
 .top-nav-collapse {
   background: black;
@@ -68,7 +72,7 @@
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  background: #121212 !important;
+  background: black !important;
 }
 
 .top-nav-collapse .navbar-brand {
