@@ -1,0 +1,52 @@
+.profile-wrapper {
+    padding: 50px 0;
+  }
+  
+  .profile-wrapper b, p{
+    color: black;
+    font-size: 18px;
+  }
+  
+  .profile-wrapper .btn {
+    margin: 10px 10px 0px 0px;
+  }
+  
+  .profile-wrapper .btn i {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .about-profile {
+    position: relative;
+    margin: 20px 0 20px 0;
+  }
+  
+  .about-profile .pro-title {
+    font-weight: 700;
+    color: black;
+    position: relative;
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  
+  .about-profile .pro-title:after {
+    position: absolute;
+    content: ':';
+    color: black;
+    font-size: 14px;
+    left: 130px;
+  }
+  
+  .about-profile .admin-sign {
+    position: absolute;
+    right: 45px;
+    bottom: 10px;
+  }
+
+  .pro-detail {
+    color: black;
+    font-size: 20px;
+    padding-left: 50px;
+  }
