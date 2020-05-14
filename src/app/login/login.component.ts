@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from "@angular/forms";
 import { HttpService } from "../http.service";
-import { HttpClient } from "@angular/common/http";
 
 
 @Component({
@@ -25,15 +24,7 @@ export class LoginComponent implements OnInit {
 
   divs = ["1", "2", "3"];
   options = ["opt1", "opt2", "opt3"];
-  
-  print(value_of , value) {
-    console.log('value of' , value_of , 'is' , value );
- }
 
-  image =
-    "https://images.freeimages.com/images/large-previews/7bc/bald-eagle-1-1400106.jpg";
-  name1;
-  age;
   loading = false;
   loading2 = false;
   buttionText = "Senda umsókn";
@@ -78,12 +69,6 @@ export class LoginComponent implements OnInit {
     console.log(this.http.test);
   }
 
-  changeImage() {
-    this.http.test = "changed";
-    this.image =
-      "https://images.pexels.com/photos/635529/pexels-photo-635529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
-  }
-
   imageUrl : string = "/assets/img/imgg.png";
   fileToUpload : File = null;
 
@@ -109,7 +94,7 @@ export class LoginComponent implements OnInit {
       image: this.imageUrl
     }
 
-    this.http.sendEmail("VANTAR LOCALHOST", user ).subscribe(
+    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user ).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
@@ -164,7 +149,7 @@ export class LoginComponent implements OnInit {
       verd: this.validVerd,
       image: this.imageUrl2
     }
-    this.http.sendEmail("VANTAR LOCALHOST", user).subscribe(
+    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
