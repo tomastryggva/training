@@ -1,105 +1,398 @@
 .profile-wrapper {
-    padding: 50px 0;
-  }
-  
-  .profile-wrapper b, p{
-    color: black;
-    font-size: 18px;
+  padding: 0px 0;
+}
+
+.section-padding {
+  padding: 50px 0;
+}
+
+#about .img-thumb img {
+  border: 8px solid green;
+  margin-left: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.text b,
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
+  color: black;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.italic {
+  font-style: italic;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.text {
+  padding-top: 20px;
+}
+
+.profile-wrapper {
+  color: black;
+  font-size: 18px;
+}
+
+.meBackground {
+  background-color: whitesmoke;
+  box-shadow: 0 0 3px whitesmoke;
+}
+
+.about-profile {
+  position: relative;
+  margin: 20px 0 20px 0;
+}
+
+.about-profile .pro-title {
+  font-weight: 700;
+  color: black;
+  position: relative;
+  width: 120px;
+  display: inline-block;
+  margin-bottom: 27px;
+  font-size: 20px;
+}
+
+.about-profile .pro-title:after {
+  position: absolute;
+  content: ":";
+  color: black;
+  font-size: 14px;
+  left: 130px;
+}
+
+.about-profile .admin-sign {
+  position: absolute;
+  right: 45px;
+  bottom: 10px;
+}
+
+.pro-detail {
+  color: black;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+/* mobile/iPhone5-SE */
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
   }
 
-  .meBackground {
-    background-color: whitesmoke;
-    box-shadow: 0 0 3px whitesmoke;
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
+  }
+
+  #about .img-thumb img {
+    border: 3px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 0px;
+  }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text b,
+  p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 17px;
+    color: black;
+    text-align: start;
+  }
+
+  .text b {
+    padding-left: 5px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  .italic {
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .text {
+    padding-top: 5px;
+  }
+  .profile-wrapper {
+    color: black;
+    font-size: 80px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: justify;
+    border-bottom: 1px solid black;
   }
 
   .about-profile {
     position: relative;
-    margin: 20px 0 20px 0;
+    margin: 1px 0 1px 0;
   }
-  
+
+  .admin-profile li {
+    margin: -20px;
+    padding-left: 20px;
+  }
+
   .about-profile .pro-title {
     font-weight: 700;
     color: black;
     position: relative;
-    width: 120px;
+    width: 3px;
     display: inline-block;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: 1px;
+    font-size: 10px;
+    padding-left: 10px;
   }
-  
+
   .about-profile .pro-title:after {
     position: absolute;
-    content: ':';
+    content: ":";
     color: black;
-    font-size: 14px;
-    left: 130px;
+    font-size: 15px;
+    left: 100px;
+    margin: -25px;
   }
-  
+
   .about-profile .admin-sign {
     position: absolute;
-    right: 45px;
-    bottom: 10px;
+    right: 4px;
+    bottom: 1px;
   }
 
   .pro-detail {
     color: black;
-    font-size: 20px;
-    padding-left: 50px;
+    font-size: 13px;
+    padding-left: 80px;
   }
-  
-  @-webkit-keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-20px);
-      transform: translateX(-20px);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-20px);
-      -ms-transform: translateX(-20px);
-      transform: translateX(-20px);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-  
-  .fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
+}
+
+/* mobile/iPhone6-7-8 */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .container {
+    width: 100%;
   }
 
-  
-@keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(20px);
-      -ms-transform: translateX(20px);
-      transform: translateX(20px);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-    }
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
   }
-  
-  .fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
+
+  #about .img-thumb img {
+    border: 3px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 0px;
   }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text b,
+  p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 17px;
+    color: black;
+    text-align: start;
+  }
+
+  .text b {
+    padding-left: 5px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  .italic {
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .text {
+    padding-top: 5px;
+  }
+  .profile-wrapper {
+    color: black;
+    font-size: 80px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: justify;
+    border-bottom: 1px solid black;
+  }
+
+  .about-profile {
+    position: relative;
+    margin: 1px 0 1px 0;
+  }
+
+  .admin-profile li {
+    margin: -20px;
+    padding-left: 20px;
+  }
+
+  .about-profile .pro-title {
+    font-weight: 700;
+    color: black;
+    position: relative;
+    width: 3px;
+    display: inline-block;
+    margin-bottom: 1px;
+    font-size: 10px;
+    padding-left: 10px;
+  }
+
+  .about-profile .pro-title:after {
+    position: absolute;
+    content: ":";
+    color: black;
+    font-size: 15px;
+    left: 100px;
+    margin: -25px;
+  }
+
+  .about-profile .admin-sign {
+    position: absolute;
+    right: 4px;
+    bottom: 1px;
+  }
+
+  .pro-detail {
+    color: black;
+    font-size: 13px;
+    padding-left: 80px;
+  }
+}
+
+/* mobile/iPhone6-7-8 Plus */
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .container {
+    width: 100%;
+  }
+
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
+  }
+
+  #about .img-thumb img {
+    border: 3px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 0px;
+  }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text b,
+  p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 17px;
+    color: black;
+    text-align: start;
+  }
+
+  .text b {
+    padding-left: 5px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  .italic {
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .text {
+    padding-top: 5px;
+  }
+  .profile-wrapper {
+    color: black;
+    font-size: 80px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: justify;
+    border-bottom: 1px solid black;
+  }
+
+  .about-profile {
+    position: relative;
+    margin: 1px 0 1px 0;
+  }
+
+  .admin-profile li {
+    margin: -20px;
+    padding-left: 20px;
+  }
+
+  .about-profile .pro-title {
+    font-weight: 700;
+    color: black;
+    position: relative;
+    width: 3px;
+    display: inline-block;
+    margin-bottom: 1px;
+    font-size: 10px;
+    padding-left: 10px;
+  }
+
+  .about-profile .pro-title:after {
+    position: absolute;
+    content: ":";
+    color: black;
+    font-size: 15px;
+    left: 100px;
+    margin: -25px;
+  }
+
+  .about-profile .admin-sign {
+    position: absolute;
+    right: 4px;
+    bottom: 1px;
+  }
+
+  .pro-detail {
+    color: black;
+    font-size: 13px;
+    padding-left: 80px;
+  }
+}

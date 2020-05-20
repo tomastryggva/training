@@ -1,0 +1,12 @@
+.mainBackground {
+    background: url(assets/img/artwork.jpg);
+    background-size: cover;
+  }
+
+    /* mobile or only mobile */
+    @media only screen and (max-width: 767px) {
+      .mainBackground {
+        width: 100%;
+        height: auto;
+      }
+    }

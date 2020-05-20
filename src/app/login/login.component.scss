@@ -4,6 +4,15 @@
     grid-gap: 2em;
 }
 
+.mat-button, .mat-raised-button{
+  background-color:green;
+} 
+
+.mat-form-field.input {
+  outline: none;
+}
+
+
 .mat-radio-button ~ .mat-radio-button {
     margin-left: 40px;
   }
@@ -59,3 +68,37 @@
 #contact #contactForm {
   margin-top: 30px;
 }
+
+  
+  /* mobile or only mobile */
+  @media only screen and (max-width: 800px) {
+
+    .footer-right-area h1 {
+      font-size: 10px;
+    }
+    .about, .services, .resume, .contact-form {
+      padding: 30px;
+    }
+
+    .mat-radio-button ~ .mat-radio-button {
+      margin-left: 1px;
+    }
+    .contact-form-area h2 {
+      font-size: 6px;
+      text-transform: uppercase;
+    }
+    .contact-form-area {
+      background: whitesmoke;
+      box-shadow: 0 0 3px whitesmoke;
+      padding: 10px 5px;
+      width: 100%;
+    }
+    
+    .radio-button {
+      margin: 5px;
+    }
+  
+    .radio-buttons {
+      margin-left: 5px;
+    }
+  }

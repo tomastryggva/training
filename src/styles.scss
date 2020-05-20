@@ -58,7 +58,7 @@
     }
     #hero-area .contents .head-title {
       color: white;
-      font-size: 30px;
+      font-size: 20px;
       position:relative;
     }
     #hero-area .contents .script-font {
@@ -90,10 +90,13 @@
   #nav-main li a.nav-link {
     padding-top: 18px;
   }
-}
+ }
 
 @media screen and (max-width: 768px) {
   .navbar-header {
+    width: 100%;
+  }
+  .container {
     width: 100%;
   }
   .navbar-brand {
@@ -108,6 +111,26 @@
     display: none;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: green !important;
+ }
+
+ .mat-form-field-underline {
+  /*change color of underline*/
+  background-color: green !important;
+} 
+
+.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: green !important;
+}
+
 
 body {
   background: #fff;
@@ -264,36 +287,21 @@ a.back-to-top:hover, a.back-to-top:focus {
   text-decoration: none;
 }
 
-.section-padding {
-  padding: 100px 0;
-}
-
-.section-padding3 {
-  padding-top: 100px;
-  padding-bottom: 150px;
-}
-
 .section-padding2 {
   padding: 30px 0;
-}
-
-#about .img-thumb img {
-  border: 8px solid green;
-  margin-left: 10px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
 
 //Verður að vera hérna, annars virka takkarnir ekki rétt
   .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
     opacity: 0 !important; /*click effect color change*/
-    background-color: #422873;  }
+    background-color: green;  }
     
     .mat-radio-button.mat-accent .mat-radio-inner-circle {
-    background-color: #422873; /*inner circle color change*/  }
+    background-color: green; /*inner circle color change*/  }
     
     .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #422873; /*outer ring color change*/  }
+    border-color: green; /*outer ring color change*/  }
 
 
 .navbar-brand {
@@ -345,11 +353,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   color: green;
 }
 
-.mainBackground {
-  background: url(assets/img/artwork.jpg);
-  background-size: cover;
-}
-
 .about, .services, .resume, .contact-form{
   padding: 70px;
 }
@@ -369,97 +372,97 @@ a.back-to-top:hover, a.back-to-top:focus {
   animation-duration: 2s;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+// @-webkit-keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
+// .fadeIn {
+//   -webkit-animation-name: fadeIn;
+//   animation-name: fadeIn;
+// }
 
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
+// @-webkit-keyframes fadeInDown {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: translateY(-20px);
+//     transform: translateY(-20px);
+//   }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     opacity: 1;
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+//   }
+// }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
+// @keyframes fadeInDown {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: translateY(-20px);
+//     -ms-transform: translateY(-20px);
+//     transform: translateY(-20px);
+//   }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     opacity: 1;
+//     -webkit-transform: translateY(0);
+//     -ms-transform: translateY(0);
+//     transform: translateY(0);
+//   }
+// }
 
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
+// .fadeInDown {
+//   -webkit-animation-name: fadeInDown;
+//   animation-name: fadeInDown;
+// }
 
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
+// @-webkit-keyframes fadeInUp {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: translateY(20px);
+//     transform: translateY(20px);
+//   }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     opacity: 1;
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+//   }
+// }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
+// @keyframes fadeInUp {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: translateY(20px);
+//     -ms-transform: translateY(20px);
+//     transform: translateY(20px);
+//   }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     opacity: 1;
+//     -webkit-transform: translateY(0);
+//     -ms-transform: translateY(0);
+//     transform: translateY(0);
+//   }
+// }
 
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
+// .fadeInUp {
+//   -webkit-animation-name: fadeInUp;
+//   animation-name: fadeInUp;
+// }

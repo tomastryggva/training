@@ -2,6 +2,11 @@
     box-sizing: border-box;
     color: #1d6734;
   }
+
+  .section-padding3 {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
   
   .columns {
     float: left;
@@ -74,9 +79,12 @@
     color: white;
   }
 
-  
+  /* mobile or only mobile */
   @media only screen and (max-width: 600px) {
     .columns {
       width: 100%;
+    }
+    .about, .services, .resume, .contact-form {
+      padding: 30px;
     }
   }

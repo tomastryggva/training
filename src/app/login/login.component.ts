@@ -18,20 +18,16 @@ export class LoginComponent implements OnInit {
   maelingValin: string[] = ['með mælingu', 'án mælingu'];
   maelingControl = new FormControl('', [Validators.required]);
 
-  myndControl = new FormControl('', [Validators.required]);
-  myndControl2 = new FormControl('', [Validators.required]);
-
-
-  divs = ["1", "2", "3"];
-  options = ["opt1", "opt2", "opt3"];
+  myndControl = new FormControl('');
+  myndControl2 = new FormControl('');
 
   loading = false;
   loading2 = false;
   buttionText = "Senda umsókn";
   buttionText2 = "Senda umsókn";
   buttionText22 = "Senda umsókn";
-  stadan1 = 'Test Test';
-  stadan2  = "Test Test";
+  stadan1 = '';
+  stadan2  = '';
 
   emailFormControl = new FormControl("", [
     Validators.required,
@@ -69,7 +65,7 @@ export class LoginComponent implements OnInit {
     console.log(this.http.test);
   }
 
-  imageUrl : string = "/assets/img/imgg.png";
+  imageUrl : string = "/assets/img/person.png";
   fileToUpload : File = null;
 
   handleFileInput(file : FileList){
@@ -84,7 +80,8 @@ export class LoginComponent implements OnInit {
 
   register() {
     this.loading = true;
-    this.buttionText = "Umsókn send";
+    this.buttionText = "Umsókn sendist...";
+    console.log(this.imageUrl);
     let user = {
       verk: "Beiðni um fjarþjálfun",
       name: this.nameFormControl.value,
@@ -94,7 +91,7 @@ export class LoginComponent implements OnInit {
       image: this.imageUrl
     }
 
-    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user ).subscribe(
+    this.http.sendEmail("http://localhost:8080/sendmail", user ).subscribe(
       data => {
         console.log("HELLO!");
         let res:any = data; 
@@ -106,11 +103,11 @@ export class LoginComponent implements OnInit {
         console.log(err);
         this.loading = false;
         this.buttionText = "Senda umsókn";
-        this.stadan1 = "VILLA - Umsókn mistókst";
+        this.stadan1 = "VILLA";
       },() => {
         this.loading = false;
         this.buttionText = "Senda umsókn";
-        this.stadan1 = "Umsókn tókst!";
+        this.stadan1 = "tokst";
       }
     )
 
@@ -120,12 +117,12 @@ export class LoginComponent implements OnInit {
     this.maelingControl.reset();
     this.myndControl.reset();
 
-    this.imageUrl = "/assets/img/imgg.png";
+    this.imageUrl = "/assets/img/person.png";
 
   }
 
 
-  imageUrl2 : string = "/assets/img/imgg.png";
+  imageUrl2 : string = "/assets/img/person.png";
   fileToUpload2 : File = null;
 
   handleFileInput2(file : FileList){
@@ -161,11 +158,11 @@ export class LoginComponent implements OnInit {
         console.log(err);
         this.loading2 = false;
         this.buttionText2 = "Senda umsókn";
-        this.stadan2 = "VILLA - Umsókn mistókst";
+        this.stadan2 = "VILLA";
       },() => {
         this.loading2 = false;
         this.buttionText2 = "Senda umsókn";
-        this.stadan2 = "Umsókn tókst!";
+        this.stadan2 = "tokst";
       }
     );
     
@@ -176,7 +173,7 @@ export class LoginComponent implements OnInit {
     this.verdControl.reset();
     this.myndControl2.reset();
 
-    this.imageUrl2 = "/assets/img/imgg.png";
+    this.imageUrl2 = "/assets/img/person.png";
   }
 }
 

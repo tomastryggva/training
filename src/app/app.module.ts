@@ -15,6 +15,7 @@ import { NavButtonsComponent } from './nav-buttons/nav-buttons.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PriceComponent } from './price/price.component';
+import { LoadingSpinnerComponent } from 'assets/shared/loading-spinner.component';
 
 
 
@@ -26,7 +27,8 @@ import { PriceComponent } from './price/price.component';
     NavButtonsComponent,
     HeaderComponent,
     FooterComponent,
-    PriceComponent
+    PriceComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
