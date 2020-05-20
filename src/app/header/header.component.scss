@@ -192,3 +192,64 @@
     margin-bottom: 25px;
   }
 }
+
+
+/* iPad */
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .hero-area-bg {
+    background-size: auto;
+  }
+  #hero-area {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 430px;
+  }
+  #hero-area .contents .head-title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  #hero-area .contents {
+    padding: 120px 0px 120px;
+  }
+  #hero-area .contents h2 {
+    font-size: 50px;
+  }
+  #hero-area .contents p {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+}
+
+/* iPad Pro */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-area-bg {
+    background-size: auto;
+  }
+  #hero-area {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 430px;
+  }
+  #hero-area .contents .head-title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  #hero-area .contents {
+    padding: 120px 0px 120px;
+  }
+  #hero-area .contents h2 {
+    font-size: 50px;
+  }
+  #hero-area .contents p {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+}
