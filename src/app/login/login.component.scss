@@ -1,55 +1,54 @@
-.dinamic{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2em;
+.dinamic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
 }
 
-.mat-button, .mat-raised-button{
-  background-color:green;
-} 
+.mat-button,
+.mat-raised-button {
+  background-color: green;
+}
 
 .mat-form-field.input {
   outline: none;
 }
 
-
 .mat-radio-button ~ .mat-radio-button {
-    margin-left: 40px;
-  }
+  margin-left: 40px;
+}
 
-  .radio-group {
-    display: flex;
-  }
-  
-  .radio-button {
-    margin: 5px;
-  }
+.radio-group {
+  display: flex;
+}
 
-  .radio-buttons {
-    margin-left: 30px;
-  }
-  
+.radio-button {
+  margin: 5px;
+}
 
-  .animate-show-hide.ng-hide {
-    opacity: 0;
-  }
-  
-  .animate-show-hide.ng-hide-add,
-  .animate-show-hide.ng-hide-remove {
-    transition: all linear 0.5s;
-  }
-  
-  .check-element {
-    border: 1px solid black;
-    opacity: 1;
-    padding: 10px;
-  }
+.radio-buttons {
+  margin-left: 30px;
+}
 
-  .askrift {
-    margin: 10px;
-  }
+.animate-show-hide.ng-hide {
+  opacity: 0;
+}
 
-  .contact-form-area {
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.check-element {
+  border: 1px solid black;
+  opacity: 1;
+  padding: 10px;
+}
+
+.askrift {
+  margin: 10px;
+}
+
+.contact-form-area {
   background: whitesmoke;
   box-shadow: 0 0 3px whitesmoke;
   padding: 60px 40px;
@@ -69,36 +68,103 @@
   margin-top: 30px;
 }
 
-  
-  /* mobile or only mobile */
-  @media only screen and (max-width: 800px) {
-
-    .footer-right-area h1 {
-      font-size: 10px;
-    }
-    .about, .services, .resume, .contact-form {
-      padding: 30px;
-    }
-
-    .mat-radio-button ~ .mat-radio-button {
-      margin-left: 1px;
-    }
-    .contact-form-area h2 {
-      font-size: 6px;
-      text-transform: uppercase;
-    }
-    .contact-form-area {
-      background: whitesmoke;
-      box-shadow: 0 0 3px whitesmoke;
-      padding: 10px 5px;
-      width: 100%;
-    }
-    
-    .radio-button {
-      margin: 5px;
-    }
-  
-    .radio-buttons {
-      margin-left: 5px;
-    }
+/* mobile/iPhone5-SE */
+@media screen and (max-width: 320px) {
+  .dinamic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
   }
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 20px;
+  }
+
+  .radio-group {
+    display: inline;
+  }
+
+  .mat-button,
+  .mat-raised-button {
+    background-color: green;
+  }
+
+  .mat-form-field.input {
+    outline: none;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 40px;
+  }
+
+  .footer-right-area:first-child .radio-button:nth-child(-n+3) {
+    margin: -3px;
+    padding-top: 4px;
+    padding-right: 40px;
+    font-size: 13px;
+    color: red;
+  }
+  .radio-button:nth-last-of-type(-n+2) {
+    margin: -10px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: green;
+  }
+
+  .radio-buttons {
+    margin-left: 30px;
+  }
+
+  .animate-show-hide.ng-hide {
+    opacity: 0;
+  }
+
+  .animate-show-hide.ng-hide-add,
+  .animate-show-hide.ng-hide-remove {
+    transition: all linear 0.5s;
+  }
+
+  .check-element {
+    border: 1px solid black;
+    opacity: 1;
+    padding: 10px;
+  }
+
+  .askrift {
+    margin: 10px;
+    font-size: 12px;
+  }
+
+  .contact-form-area {
+    background: whitesmoke;
+    box-shadow: 0 0 3px whitesmoke;
+    padding: 10px 0px;
+  }
+  .footer-right-area {
+    margin-bottom: 20px;
+  }
+
+  .contact-form-area h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  #contact {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #contact #contactForm {
+    margin-top: 30px;
+  }
+}
+
+/* mobile/iPhone6-7-8 */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+}
+
+/* mobile/iPhone6-7-8 Plus */
+@media screen and (min-width: 376px) and (max-width: 414px) {
+}

@@ -1,63 +1,115 @@
-  * {
-    box-sizing: border-box;
-    color: #1d6734;
-  }
+* {
+  box-sizing: border-box;
+  color: #1d6734;
+}
 
-  .section-padding3 {
-    padding-top: 100px;
-    padding-bottom: 150px;
-  }
-  
+.section-padding3 {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.columns {
+  float: left;
+  width: 50%;
+  padding: 8px;
+}
+.priceBackground {
+  background-color: black;
+  box-shadow: 0 0 10px black;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(255, 0, 0, 0.2);
+}
+
+.price .header {
+  background-color: #1d6734;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+  color: #1d6734;
+}
+
+.grey a {
+  color: white;
+}
+
+.grey a:hover {
+  box-shadow: 0px 0px 10px green;
+}
+
+.buttonPrice {
+  background-color: #1d6734;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.buttonPrice:hover {
+  border-width: 10px;
+}
+.verdTexti {
+  color: white;
+}
+.verdTexti p {
+  color: white;
+}
+.about,
+.services,
+.resume,
+.contact-form {
+  padding: 30px;
+}
+
+/* mobile/iPhone5-SE */
+@media screen and (max-width: 320px) {
   .columns {
-    float: left;
-    width: 50%;
-    padding: 8px;
+    width: 100%;
+    padding-bottom: 10px;
   }
-  .priceBackground {
-    background-color: black;
-      box-shadow: 0 0 10px black;
+  .columns:first-of-type {
+    border-bottom: 1px solid white;
   }
-  
-  .price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+  .section-padding3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-  
-  .price:hover {
-    box-shadow: 0 8px 12px 0 rgba(255, 0, 0, 0.2)
+  h2 {
+    font-size: 30px;
   }
-  
   .price .header {
     background-color: #1d6734;
     color: white;
     font-size: 25px;
   }
-  
-  .price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-  
   .price .grey {
     background-color: #eee;
-    font-size: 20px;
+    font-size: 16px;
     color: #1d6734;
   }
-  
-  .grey a {
-    color: white;
-  }
-  
-  .grey a:hover {
-    box-shadow: 0px 0px 10px green;
-  }
-  
   .buttonPrice {
     background-color: #1d6734;
     border: none;
@@ -67,24 +119,78 @@
     text-decoration: none;
     font-size: 18px;
   }
-  
-  .buttonPrice:hover {
-    border-width: 10px;
-    border-color: red;
-  }
-  .verdTexti {
-    color: white;
-  }
-  .verdTexti p {
-    color: white;
-  }
+}
 
-  /* mobile or only mobile */
-  @media only screen and (max-width: 600px) {
-    .columns {
-      width: 100%;
-    }
-    .about, .services, .resume, .contact-form {
-      padding: 30px;
-    }
+/* mobile/iPhone6-7-8 */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .columns {
+    width: 100%;
+    padding-bottom: 10px;
   }
+  .columns:first-of-type {
+    border-bottom: 1px solid white;
+  }
+  .section-padding3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .price .header {
+    background-color: #1d6734;
+    color: white;
+    font-size: 25px;
+  }
+  .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+    color: #1d6734;
+  }
+  .buttonPrice {
+    background-color: #1d6734;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+/* mobile/iPhone6-7-8 Plus */
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .columns {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .columns:first-of-type {
+    border-bottom: 1px solid white;
+  }
+  .section-padding3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .price .header {
+    background-color: #1d6734;
+    color: white;
+    font-size: 25px;
+  }
+  .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+    color: #1d6734;
+  }
+  .buttonPrice {
+    background-color: #1d6734;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
