@@ -194,3 +194,40 @@
     font-size: 18px;
   }
 }
+
+/* iPad */
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .columns {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .columns:first-of-type {
+    border-bottom: 1px solid white;
+  }
+  .section-padding3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .price .header {
+    background-color: #1d6734;
+    color: white;
+    font-size: 25px;
+  }
+  .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+    color: #1d6734;
+  }
+  .buttonPrice {
+    background-color: #1d6734;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
