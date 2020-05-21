@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from "@angular/forms";
-import { HttpService } from "../http.service";
+import { FormControl, Validators } from '@angular/forms';
+import { HttpService } from '../http.service';
 
 
 @Component({
@@ -9,6 +9,8 @@ import { HttpService } from "../http.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  constructor(public http: HttpService) {}
 
   validVerd: string;
   verd: string[] = ['1-3x í viku', '4x í viku', '5x í viku'];
@@ -23,78 +25,80 @@ export class LoginComponent implements OnInit {
 
   loading = false;
   loading2 = false;
-  buttionText = "Senda umsókn";
-  buttionText2 = "Senda umsókn";
-  buttionText22 = "Senda umsókn";
+  buttionText = 'Senda umsókn';
+  buttionText2 = 'Senda umsókn';
+  buttionText22 = 'Senda umsókn';
   stadan1 = '';
   stadan2  = '';
 
-  emailFormControl = new FormControl("", [
+  emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email
   ]);
 
-  nameFormControl = new FormControl("", [
+  nameFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(2)
   ]);
 
-  ageFormControl = new FormControl("", [
+  ageFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(2)
   ]);
 
-  emailFormControl2 = new FormControl("", [
+  emailFormControl2 = new FormControl('', [
     Validators.required,
     Validators.email
   ]);
 
-  nameFormControl2 = new FormControl("", [
+  nameFormControl2 = new FormControl('', [
     Validators.required,
     Validators.minLength(2)
   ]);
 
-  ageFormControl2 = new FormControl("", [
+  ageFormControl2 = new FormControl('', [
     Validators.required,
     Validators.minLength(2)
   ]);
 
-  constructor(public http: HttpService) {}
+  imageUrl = '/assets/img/person.png';
+  fileToUpload: File = null;
+
+
+  imageUrl2 = '/assets/img/person.png';
+  fileToUpload2: File = null;
 
   ngOnInit() {
     console.log(this.http.test);
   }
 
-  imageUrl : string = "/assets/img/person.png";
-  fileToUpload : File = null;
-
-  handleFileInput(file : FileList){
+  handleFileInput(file: FileList) {
     this.fileToUpload = file.item(0);
 
-    var reader = new FileReader();
-    reader.onload = (event:any) => {
+    const reader = new FileReader();
+    reader.onload = (event: any) => {
       this.imageUrl = event.target.result;
-    }
+    };
     reader.readAsDataURL(this.fileToUpload);
   }
 
   register() {
     this.loading = true;
-    this.buttionText = "Umsókn sendist...";
+    this.buttionText = 'Umsókn sendist...';
     console.log(this.imageUrl);
-    let user = {
-      verk: "Beiðni um fjarþjálfun",
+    const user = {
+      verk: 'Beiðni um fjarþjálfun',
       name: this.nameFormControl.value,
       email: this.emailFormControl.value,
       age: this.ageFormControl.value,
       verd: this.maeling,
       image: this.imageUrl
-    }
+    };
 
-    this.http.sendEmail("http://localhost:8080/sendmail", user ).subscribe(
+    this.http.sendEmail('http://localhost:8080/sendmail', user ).subscribe(
       data => {
-        console.log("HELLO!");
-        let res:any = data; 
+        console.log('HELLO!');
+        const res: any = data;
         console.log(
           `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
         );
@@ -102,14 +106,14 @@ export class LoginComponent implements OnInit {
       err => {
         console.log(err);
         this.loading = false;
-        this.buttionText = "Senda umsókn";
-        this.stadan1 = "VILLA";
-      },() => {
+        this.buttionText = 'Senda umsókn';
+        this.stadan1 = 'VILLA';
+      }, () => {
         this.loading = false;
-        this.buttionText = "Senda umsókn";
-        this.stadan1 = "tokst";
+        this.buttionText = 'Senda umsókn';
+        this.stadan1 = 'tokst';
       }
-    )
+    );
 
     this.nameFormControl.reset();
     this.ageFormControl.reset();
@@ -117,39 +121,35 @@ export class LoginComponent implements OnInit {
     this.maelingControl.reset();
     this.myndControl.reset();
 
-    this.imageUrl = "/assets/img/person.png";
+    this.imageUrl = '/assets/img/person.png';
 
   }
 
-
-  imageUrl2 : string = "/assets/img/person.png";
-  fileToUpload2 : File = null;
-
-  handleFileInput2(file : FileList){
+  handleFileInput2(file: FileList) {
     this.fileToUpload2 = file.item(0);
 
-    var reader = new FileReader();
-    reader.onload = (event:any) => {
+    const reader = new FileReader();
+    reader.onload = (event: any) => {
       this.imageUrl2 = event.target.result;
-    }
+    };
     reader.readAsDataURL(this.fileToUpload2);
   }
 
   register2() {
     this.loading2 = true;
-    this.buttionText2 = "Umsókn sendist...";
-    let user = {
-      verk: "Beiðni um einkaþjálfun",
+    this.buttionText2 = 'Umsókn sendist...';
+    const user = {
+      verk: 'Beiðni um einkaþjálfun',
       name: this.nameFormControl2.value,
       email: this.emailFormControl2.value,
       age: this.ageFormControl2.value,
       verd: this.validVerd,
       image: this.imageUrl2
-    }
-    this.http.sendEmail("https://testareactdot.herokuapp.com/sendmail", user).subscribe(
+    };
+    this.http.sendEmail('https://testareactdot.herokuapp.com/sendmail', user).subscribe(
       data => {
-        console.log("HELLO!");
-        let res:any = data; 
+        console.log('HELLO!');
+        const res: any = data;
         console.log(
           `👏 > 👏 > 👏 > 👏 ${user.verd} is successfully register and mail has been sent and the message id is ${res.messageId}`
         );
@@ -157,15 +157,15 @@ export class LoginComponent implements OnInit {
       err => {
         console.log(err);
         this.loading2 = false;
-        this.buttionText2 = "Senda umsókn";
-        this.stadan2 = "VILLA";
-      },() => {
+        this.buttionText2 = 'Senda umsókn';
+        this.stadan2 = 'VILLA';
+      }, () => {
         this.loading2 = false;
-        this.buttionText2 = "Senda umsókn";
-        this.stadan2 = "tokst";
+        this.buttionText2 = 'Senda umsókn';
+        this.stadan2 = 'tokst';
       }
     );
-    
+
 
     this.nameFormControl2.reset();
     this.ageFormControl2.reset();
@@ -173,7 +173,7 @@ export class LoginComponent implements OnInit {
     this.verdControl.reset();
     this.myndControl2.reset();
 
-    this.imageUrl2 = "/assets/img/person.png";
+    this.imageUrl2 = '/assets/img/person.png';
   }
 }
 

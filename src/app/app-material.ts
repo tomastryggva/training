@@ -8,14 +8,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 const materialComponents = [
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
     MatRadioModule,
     MatSnackBarModule
-]
+];
 
 @NgModule({
   imports: materialComponents,
