@@ -12,7 +12,7 @@
       font-size: 14px;
     }
   }
-  
+
   /* tablets */
   @media (max-width: 991px) {
     .section-title {
@@ -26,7 +26,7 @@
       margin-bottom: 20px;
     }
   }
-  
+
   /* only small tablets */
   @media (min-width: 768px) and (max-width: 991px) {
     .section-title {
@@ -40,7 +40,7 @@
       margin-bottom: 20px;
     }
   }
-  
+
   /* mobile or only mobile */
   @media screen and (max-width: 767px) {
     .section-title {
@@ -121,7 +121,7 @@ html {
  .mat-form-field-underline {
   /*change color of underline*/
   background-color: green !important;
-} 
+}
 
 .mat-form-field-ripple {
  /*change color of underline when focused*/
@@ -293,10 +293,10 @@ a.back-to-top:hover, a.back-to-top:focus {
   .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
     opacity: 0 !important; /*click effect color change*/
     background-color: green;  }
-    
+
     .mat-radio-button.mat-accent .mat-radio-inner-circle {
     background-color: green; /*inner circle color change*/  }
-    
+
     .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
     border-color: green; /*outer ring color change*/  }
 
@@ -323,8 +323,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 .navbar-expand-lg .navbar-nav .nav-link {
   color: #333;
   font-weight: 700;
-  font-size: 18px;
-  padding: 0 17px;
+  font-size: 15px;
+  padding: 0 15px;
   margin-top: 15px;
   margin-bottom: 15px;
   text-transform: uppercase;

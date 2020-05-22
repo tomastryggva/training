@@ -59,15 +59,17 @@
                 <br />
                 <form #imageForm=ngForm>
                   <img [src]="imageUrl" style="width:90px;height:90px">
+                  <span style="padding-left: 20px;">Mynd(valmöguleiki)*</span><br/>
+                  <hr/>
                   <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"
                     [formControl]="myndControl">
                 </form>
 
                 <br />
-                <button id="myBtn" class="col" mat-raised-button [disabled]="emailFormControl.invalid || 
-                      nameFormControl.invalid || 
+                <button id="myBtn" class="col" mat-raised-button [disabled]="emailFormControl.invalid ||
+                      nameFormControl.invalid ||
                       maelingControl.invalid ||
-                      ageFormControl.invalid || 
+                      ageFormControl.invalid ||
                       loading" color="primary" (click)="register()">
                   {{buttionText}}
                 </button>
@@ -153,15 +155,17 @@
 
                 <form #imageForm=ngForm>
                   <img [src]="imageUrl2" style="width:90px;height:90px">
+                  <span style="padding-left: 20px;">Mynd(valmöguleiki)*</span><br/>
+                  <hr/>
                   <input type="file" #Image accept="image/*" (change)="handleFileInput2($event.target.files)"
                     [formControl]="myndControl2">
                 </form>
 
                 <br />
-                <button class="col" mat-raised-button [disabled]="emailFormControl2.invalid || 
-                      nameFormControl2.invalid || 
-                      verdControl.invalid || 
-                      ageFormControl2.invalid || 
+                <button class="col" mat-raised-button [disabled]="emailFormControl2.invalid ||
+                      nameFormControl2.invalid ||
+                      verdControl.invalid ||
+                      ageFormControl2.invalid ||
                       loading2" color="primary" (click)="register2()">
                   {{buttionText2}}
                 </button>
