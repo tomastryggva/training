@@ -58,14 +58,12 @@
                 </mat-form-field>
                 <br />
                 <form #imageForm=ngForm>
-                  <img [src]="imageUrl" style="width:90px;height:90px">
-                  <span style="padding-left: 20px;">Mynd(valmöguleiki)*</span><br/>
-                  <hr/>
+                  <img [src]="imageUrl" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;">
+                  <span style="padding-left:20px;">Mynd (valmöguleiki)*</span><br/>
                   <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"
                     [formControl]="myndControl">
                 </form>
-
-                <br />
+                <hr/>
                 <button id="myBtn" class="col" mat-raised-button [disabled]="emailFormControl.invalid ||
                       nameFormControl.invalid ||
                       maelingControl.invalid ||
@@ -154,14 +152,12 @@
                 <br />
 
                 <form #imageForm=ngForm>
-                  <img [src]="imageUrl2" style="width:90px;height:90px">
-                  <span style="padding-left: 20px;">Mynd(valmöguleiki)*</span><br/>
-                  <hr/>
+                  <img [src]="imageUrl2" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;">
+                  <span style="padding-left: 20px;">Mynd (valmöguleiki)*</span><br/>
                   <input type="file" #Image accept="image/*" (change)="handleFileInput2($event.target.files)"
                     [formControl]="myndControl2">
                 </form>
-
-                <br />
+                <hr/>
                 <button class="col" mat-raised-button [disabled]="emailFormControl2.invalid ||
                       nameFormControl2.invalid ||
                       verdControl.invalid ||

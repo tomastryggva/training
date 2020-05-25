@@ -3,111 +3,111 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 
-    /* only small desktops */
-@media (min-width: 992px) {
-    #hero-area .contents .head-title {
-      font-size: 80px;
-    }
-    .services-item .services-content h3 a {
-      font-size: 14px;
-    }
-  }
+//     /* only small desktops */
+// @media (min-width: 992px) {
+//     #hero-area .contents .head-title {
+//       font-size: 80px;
+//     }
+//     .services-item .services-content h3 a {
+//       font-size: 14px;
+//     }
+//   }
 
-  /* tablets */
-  @media (max-width: 991px) {
-    .section-title {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
-    .services-item .services-content h3 a {
-      font-size: 14px;
-    }
-    .services-item {
-      margin-bottom: 20px;
-    }
-  }
+//   /* tablets */
+//   @media (max-width: 991px) {
+//     .section-title {
+//       font-size: 30px;
+//       margin-bottom: 30px;
+//     }
+//     .services-item .services-content h3 a {
+//       font-size: 14px;
+//     }
+//     .services-item {
+//       margin-bottom: 20px;
+//     }
+//   }
 
-  /* only small tablets */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .section-title {
-      font-size: 26px;
-      margin-bottom: 30px;
-    }
-    .services-item .services-content h3 a {
-      font-size: 16px;
-    }
-    .services-item {
-      margin-bottom: 20px;
-    }
-  }
+//   /* only small tablets */
+//   @media (min-width: 768px) and (max-width: 991px) {
+//     .section-title {
+//       font-size: 26px;
+//       margin-bottom: 30px;
+//     }
+//     .services-item .services-content h3 a {
+//       font-size: 16px;
+//     }
+//     .services-item {
+//       margin-bottom: 20px;
+//     }
+//   }
 
-  /* mobile or only mobile */
-  @media screen and (max-width: 767px) {
-    .section-title {
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
-    .section-sub {
-      font-size: 16px;
-    }
-    .navbar-brand img {
-      margin: 5px 0;
-    }
-    #hero-area .contents {
-      padding: 100px 0px 60px 0px;
-    }
-    #hero-area .contents .head-title {
-      color: white;
-      font-size: 20px;
-      position:relative;
-    }
-    #hero-area .contents .script-font {
-      color: #1d6734;
-    }
-    #hero-area .contents .script-fonts {
-      height: 100px;
-      width: 250px;
-    }
-    #hero-area .contents h5 {
-      font-size: 32px;
-    }
-    #hero-area .contents p {
-      font-size: 20px;
-    }
-    .services-item {
-      margin-bottom: 20px;
-    }
-    .contact-form-area {
-      padding: 40px 0px;
-    }
-  }
+//   /* mobile or only mobile */
+//   @media screen and (max-width: 767px) {
+//     .section-title {
+//       font-size: 22px;
+//       margin-bottom: 30px;
+//     }
+//     .section-sub {
+//       font-size: 16px;
+//     }
+//     .navbar-brand img {
+//       margin: 5px 0;
+//     }
+//     #hero-area .contents {
+//       padding: 100px 0px 60px 0px;
+//     }
+//     #hero-area .contents .head-title {
+//       color: white;
+//       font-size: 20px;
+//       position:relative;
+//     }
+//     #hero-area .contents .script-font {
+//       color: #1d6734;
+//     }
+//     #hero-area .contents .script-fonts {
+//       height: 100px;
+//       width: 250px;
+//     }
+//     #hero-area .contents h5 {
+//       font-size: 32px;
+//     }
+//     #hero-area .contents p {
+//       font-size: 20px;
+//     }
+//     .services-item {
+//       margin-bottom: 20px;
+//     }
+//     .contact-form-area {
+//       padding: 40px 0px;
+//     }
+//   }
 
-  /* only small tablets */
-@media (min-width: 768px) and (max-width: 991px) {
-  #nav-main li a.nav-link {
-    padding-top: 18px;
-  }
- }
+//   /* only small tablets */
+// @media (min-width: 768px) and (max-width: 991px) {
+//   #nav-main li a.nav-link {
+//     padding-top: 18px;
+//   }
+//  }
 
-@media screen and (max-width: 768px) {
-  .navbar-header {
-    width: 100%;
-  }
-  .container {
-    width: 100%;
-  }
-  .navbar-brand {
-    position: absolute;
-    padding: 0px 15px;
-    top: 0;
-  }
-  .navbar-brand img {
-    width: 75%;
-  }
-  #mobile-menu {
-    display: none;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .navbar-header {
+//     width: 100%;
+//   }
+//   .container {
+//     width: 100%;
+//   }
+//   .navbar-brand {
+//     position: absolute;
+//     padding: 0px 15px;
+//     top: 0;
+//   }
+//   .navbar-brand img {
+//     width: 75%;
+//   }
+//   #mobile-menu {
+//     display: none;
+//   }
+// }
 
 html {
   scroll-behavior: smooth;
@@ -323,8 +323,9 @@ a.back-to-top:hover, a.back-to-top:focus {
 .navbar-expand-lg .navbar-nav .nav-link {
   color: #333;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   padding: 0 15px;
+  padding-top: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
   text-transform: uppercase;
