@@ -95,7 +95,7 @@ export class LoginComponent implements OnInit {
       image: this.imageUrl
     };
 
-    this.http.sendEmail('http://localhost:8080/sendmail', user ).subscribe(
+    this.http.sendEmail('https://testareactdot.herokuapp.com/sendmail', user ).subscribe(
       data => {
         console.log('HELLO!');
         const res: any = data;

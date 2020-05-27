@@ -58,10 +58,12 @@
                 </mat-form-field>
                 <br />
                 <form #imageForm=ngForm>
-                  <img [src]="imageUrl" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;">
-                  <span style="padding-left:20px;">Mynd (valmöguleiki)*</span><br/>
+                  <img [src]="imageUrl" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;margin-left:5px;">
+                  <span class="myndOption">Mynd (valmöguleiki)*</span><br/>
+                  <button mat-stroked-button type="button" (click)="Image.click()">Velja mynd</button>
                   <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"
                     [formControl]="myndControl">
+
                 </form>
                 <hr/>
                 <button id="myBtn" class="col" mat-raised-button [disabled]="emailFormControl.invalid ||
@@ -152,9 +154,10 @@
                 <br />
 
                 <form #imageForm=ngForm>
-                  <img [src]="imageUrl2" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;">
-                  <span style="padding-left: 20px;">Mynd (valmöguleiki)*</span><br/>
-                  <input type="file" #Image accept="image/*" (change)="handleFileInput2($event.target.files)"
+                  <img [src]="imageUrl2" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;margin-left:5px;">
+                  <span class="myndOption">Mynd (valmöguleiki)*</span><br/>
+                  <button mat-stroked-button type="button" (click)="Image2.click()">Velja mynd</button>
+                  <input type="file" #Image2 accept="image/*" (change)="handleFileInput2($event.target.files)"
                     [formControl]="myndControl2">
                 </form>
                 <hr/>
@@ -165,7 +168,7 @@
                       loading2" color="primary" (click)="register2()">
                   {{buttionText2}}
                 </button>
-                <div class="col-sm-12" *ngIf="loading2">
+                <div class="col-sm-12" *ngIf="!loading2">
                   <app-loading-spinner></app-loading-spinner>
                 </div>
                 <div *ngIf="stadan2 === 'VILLA'">

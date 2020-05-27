@@ -8,6 +8,14 @@
   padding-right: 100px;
 }
 
+input[type="file"] {
+  display: none;
+}
+
+.myndOption {
+  padding-left: 20px;
+  font-size: 16px;
+}
 .mat-button,
 .mat-raised-button {
   background-color: green;
@@ -80,6 +88,10 @@
   .contact-form {
     padding: 20px;
   }
+  .myndOption {
+    padding-left: 20px;
+    font-size: 11px;
+  }
 
   .radio-group {
     display: inline;
@@ -129,6 +141,11 @@
   .resume,
   .contact-form {
     padding: 20px;
+  }
+
+  .myndOption {
+    padding-left: 20px;
+    font-size: 15px;
   }
 
   .radio-group {
@@ -184,6 +201,12 @@
   // .radio-group {
   //   display: inline;
   // }
+
+  .myndOption {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
 
   .footer-right-area:first-child .radio-button:nth-child(-n + 3) {
     margin: -7px;
