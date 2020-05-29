@@ -8,6 +8,11 @@
   padding-bottom: 50px;
 }
 
+.smallText {
+  text-align: center;
+  font-size: 15px;
+}
+
 .columns {
   float: left;
   width: 50%;
@@ -45,7 +50,7 @@
 }
 
 .price .grey {
-  background-color: #eee;
+  background-color: rgb(189, 189, 189);
   font-size: 20px;
   color: #1d6734;
 }
@@ -55,7 +60,7 @@
 }
 
 .grey a:hover {
-  box-shadow: 0px 0px 10px green;
+  box-shadow: 0px 0px 10px #1d6734;
 }
 
 .buttonPrice {
@@ -92,16 +97,21 @@
     padding-bottom: 20px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .price .header {
     background-color: #1d6734;
     color: white;
     font-size: 25px;
   }
+
+.smallText {
+  text-align: center;
+  font-size: 10px;
+}
   .price .grey {
     background-color: #eee;
-    font-size: 16px;
+    font-size:16px;
     color: #1d6734;
   }
   .buttonPrice {
@@ -129,7 +139,11 @@
     padding-bottom: 20px;
   }
   h2 {
-    font-size: 35px;
+    font-size: 25px;
+  }
+  .smallText {
+    text-align: center;
+    font-size: 10px;
   }
   .price .header {
     background-color: #1d6734;
@@ -165,8 +179,12 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .smallText {
+    text-align: center;
+    font-size: 10px;
+  }
   h2 {
-    font-size: 35px;
+    font-size: 25px;
   }
   .price .header {
     background-color: #1d6734;
@@ -204,6 +222,10 @@
   }
   h2 {
     font-size: 35px;
+  }
+  .smallText {
+    text-align: center;
+    font-size: 15px;
   }
   .price .header {
     background-color: #1d6734;

@@ -7,7 +7,7 @@
 }
 
 #about .img-thumb img {
-  border: 8px solid green;
+  border: 5px solid #1d6734;
   margin-left: 10px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
@@ -16,18 +16,21 @@
 p {
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 22px;
+  font-size: 17px;
   color: black;
   text-align: justify;
   text-justify: inter-word;
+  letter-spacing: 3px;
 }
 
 .italic {
   font-style: italic;
   text-align: center;
+  font-size: 17px;
   padding-top: 20px;
   padding-left: 250px;
   padding-right: 250px;
+  letter-spacing: 2px;
 }
 
 .text {
@@ -40,7 +43,7 @@ p {
 }
 
 .meBackground {
-  background-color: whitesmoke;
+  background-color: rgb(189, 189, 189);
   box-shadow: 0 0 3px whitesmoke;
 }
 
@@ -53,18 +56,29 @@ p {
   font-weight: 700;
   color: black;
   position: relative;
-  width: 120px;
+  width: 148px;
   display: inline-block;
   margin-bottom: 27px;
-  font-size: 20px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+ul, ol {
+  list-style: outside none none;
+  margin: 0;
 }
 
+ul li, ol li {
+  list-style: none;
+}
 .about-profile .pro-title:after {
   position: absolute;
   content: ":";
-  color: black;
+  color: #1d6734;
   font-size: 14px;
-  left: 130px;
+  left: 110px;
+  text-indent: 50px;
+  letter-spacing: 2px;
 }
 
 .about-profile .admin-sign {
@@ -75,8 +89,10 @@ p {
 
 .pro-detail {
   color: black;
-  font-size: 20px;
-  padding-left: 50px;
+  font-size: 15px;
+  padding-left: 60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* mobile/iPhone5-SE */
@@ -93,7 +109,7 @@ p {
   }
 
   #about .img-thumb img {
-    border: 3px solid green;
+    border: 3px solid #1d6734;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     margin-left: 0px;
   }
@@ -106,28 +122,31 @@ p {
     padding: 20px 0;
   }
 
-  .text b,
-  p {
+  .text p {
     padding-left: 5px;
     padding-right: 10px;
-    font-size: 17px;
+    font-size: 9px;
     color: black;
-    text-align: start;
+    text-align: justify;
+    letter-spacing: 1px;
   }
 
   .text b {
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 9px;
     color: black;
     text-align: center;
+    letter-spacing: 1px;
   }
 
   .italic {
     font-style: italic;
     text-align: center;
+    font-size: 9px;
     padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    letter-spacing: 1px;
   }
 
   .text {
@@ -136,7 +155,6 @@ p {
   .profile-wrapper {
     color: black;
     font-size: 80px;
-    padding-top: 18px;
     padding-bottom: 18px;
     text-align: justify;
     border-bottom: 1px solid black;
@@ -145,11 +163,13 @@ p {
   .about-profile {
     position: relative;
     margin: 1px 0 1px 0;
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
   }
 
   .admin-profile li {
-    margin: -20px;
-    padding-left: 20px;
+    margin: -27px;
   }
 
   .about-profile .pro-title {
@@ -159,16 +179,16 @@ p {
     width: 3px;
     display: inline-block;
     margin-bottom: 1px;
-    font-size: 10px;
-    padding-left: 10px;
+    font-size: 5px;
+    letter-spacing: 1px;
   }
 
   .about-profile .pro-title:after {
     position: absolute;
     content: ":";
-    color: black;
-    font-size: 15px;
-    left: 100px;
+    color: #1d6734;
+    font-size: 7px;
+    left: 50px;
     margin: -25px;
   }
 
@@ -180,8 +200,9 @@ p {
 
   .pro-detail {
     color: black;
-    font-size: 13px;
-    padding-left: 80px;
+    font-size: 5px;
+    padding-left: 100px;
+    letter-spacing: 1px;
   }
 }
 
@@ -199,7 +220,7 @@ p {
   }
 
   #about .img-thumb img {
-    border: 3px solid green;
+    border: 3px solid #1d6734;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     margin-left: 0px;
   }
@@ -212,28 +233,31 @@ p {
     padding: 20px 0;
   }
 
-  .text b,
-  p {
+  .text p {
     padding-left: 5px;
     padding-right: 10px;
-    font-size: 17px;
+    font-size: 9px;
     color: black;
-    text-align: start;
+    text-align: justify;
+    letter-spacing: 1px;
   }
 
   .text b {
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 9px;
     color: black;
     text-align: center;
+    letter-spacing: 1px;
   }
 
   .italic {
     font-style: italic;
     text-align: center;
+    font-size: 9px;
     padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    letter-spacing: 1px;
   }
 
   .text {
@@ -242,7 +266,6 @@ p {
   .profile-wrapper {
     color: black;
     font-size: 80px;
-    padding-top: 18px;
     padding-bottom: 18px;
     text-align: justify;
     border-bottom: 1px solid black;
@@ -251,11 +274,13 @@ p {
   .about-profile {
     position: relative;
     margin: 1px 0 1px 0;
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
   }
 
   .admin-profile li {
     margin: -20px;
-    padding-left: 20px;
   }
 
   .about-profile .pro-title {
@@ -265,16 +290,16 @@ p {
     width: 3px;
     display: inline-block;
     margin-bottom: 1px;
-    font-size: 10px;
-    padding-left: 10px;
+    font-size: 7px;
+    letter-spacing: 1px;
   }
 
   .about-profile .pro-title:after {
     position: absolute;
     content: ":";
-    color: black;
-    font-size: 15px;
-    left: 100px;
+    color: #1d6734;
+    font-size: 10px;
+    left: 65px;
     margin: -25px;
   }
 
@@ -286,8 +311,9 @@ p {
 
   .pro-detail {
     color: black;
-    font-size: 13px;
-    padding-left: 80px;
+    font-size: 7px;
+    padding-left: 120px;
+    letter-spacing: 1px;
   }
 }
 
@@ -305,7 +331,7 @@ p {
   }
 
   #about .img-thumb img {
-    border: 3px solid green;
+    border: 3px solid #1d6734;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     margin-left: 0px;
   }
@@ -318,28 +344,31 @@ p {
     padding: 20px 0;
   }
 
-  .text b,
-  p {
+  .text p {
     padding-left: 5px;
     padding-right: 10px;
-    font-size: 17px;
+    font-size: 10px;
     color: black;
-    text-align: start;
+    text-align: justify;
+    letter-spacing: 1px;
   }
 
   .text b {
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 10px;
     color: black;
     text-align: center;
+    letter-spacing: 1px;
   }
 
   .italic {
     font-style: italic;
     text-align: center;
+    font-size: 10px;
     padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    letter-spacing: 1px;
   }
 
   .text {
@@ -348,7 +377,6 @@ p {
   .profile-wrapper {
     color: black;
     font-size: 80px;
-    padding-top: 18px;
     padding-bottom: 18px;
     text-align: justify;
     border-bottom: 1px solid black;
@@ -357,11 +385,13 @@ p {
   .about-profile {
     position: relative;
     margin: 1px 0 1px 0;
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
   }
 
   .admin-profile li {
     margin: -20px;
-    padding-left: 20px;
   }
 
   .about-profile .pro-title {
@@ -371,16 +401,16 @@ p {
     width: 3px;
     display: inline-block;
     margin-bottom: 1px;
-    font-size: 10px;
-    padding-left: 10px;
+    font-size: 8px;
+    letter-spacing: 1px;
   }
 
   .about-profile .pro-title:after {
     position: absolute;
     content: ":";
-    color: black;
-    font-size: 15px;
-    left: 100px;
+    color: #1d6734;
+    font-size: 10px;
+    left: 75px;
     margin: -25px;
   }
 
@@ -392,8 +422,9 @@ p {
 
   .pro-detail {
     color: black;
-    font-size: 13px;
-    padding-left: 80px;
+    font-size: 8px;
+    padding-left: 130px;
+    letter-spacing: 1px;
   }
 }
 
@@ -411,41 +442,44 @@ p {
   }
 
   #about .img-thumb img {
-    border: 3px solid green;
+    border: 3px solid #1d6734;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-    margin-left: 12px;
+    margin-left: 0px;
   }
 
   .img-thumb {
-    padding-bottom: 12px;
+    padding-bottom: 0px;
   }
 
   .section-padding {
     padding: 20px 0;
   }
 
-  .text b,
-  p {
+  .text p {
     padding-left: 5px;
     padding-right: 10px;
-    font-size: 17px;
+    font-size: 10px;
     color: black;
-    text-align: start;
+    text-align: justify;
+    letter-spacing: 2px;
   }
 
   .text b {
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 7px;
     color: black;
     text-align: center;
+    letter-spacing: 1px;
   }
 
   .italic {
     font-style: italic;
     text-align: center;
-    padding-top: 20px;
-    padding-left: 150px;
-    padding-right: 150px;
+    font-size: 7px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    letter-spacing: 1px;
   }
 
   .text {
@@ -454,10 +488,8 @@ p {
   .profile-wrapper {
     color: black;
     font-size: 80px;
-    padding-top: 18px;
     padding-bottom: 18px;
     text-align: justify;
-    text-justify: inter-word;
   }
 
   .about-profile {
@@ -467,7 +499,6 @@ p {
 
   .admin-profile li {
     margin: -20px;
-    padding-left: 20px;
   }
 
   .about-profile .pro-title {
@@ -477,16 +508,16 @@ p {
     width: 3px;
     display: inline-block;
     margin-bottom: 1px;
-    font-size: 15px;
-    padding-left: 10px;
+    font-size: 6px;
+    letter-spacing: 1px;
   }
 
   .about-profile .pro-title:after {
     position: absolute;
     content: ":";
-    color: black;
-    font-size: 14px;
-    left: 140px;
+    color: #1d6734;
+    font-size: 10px;
+    left: 95px;
     margin: -25px;
   }
 
@@ -498,7 +529,8 @@ p {
 
   .pro-detail {
     color: black;
-    font-size: 15px;
-    padding-left: 140px;
+    font-size: 5px;
+    padding-left: 120px;
+    letter-spacing: 1px;
   }
 }
