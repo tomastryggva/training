@@ -11,6 +11,11 @@
   .footer-area .footer-text p a {
     color: #00b4d9;
   }
+  dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 0px;
+  }
 
   .footer-area .footer-text .nav-inline .nav-link {
     padding: 11px 7px;

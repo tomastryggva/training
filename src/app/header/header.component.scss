@@ -20,7 +20,11 @@
   position: relative;
   height: 600px;
 }
-
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 0px;
+}
 #home .contents {
   padding: 175px 0px 120px;
 }
