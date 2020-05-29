@@ -1,0 +1,269 @@
+.section-padding {
+  padding: 50px 0;
+}
+
+#training .img-thumb img {
+  border: 8px solid green;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  height: 250px;
+  width: 250px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: black;
+}
+
+b {
+  display: flex; /* display flex-items (children) inline */
+  justify-content: center; /* centers them horizontally */
+  align-items: center; /* and vertically */
+  font-size: 20px;
+  color: black;
+}
+
+.img-thumb {
+  display: flex; /* display flex-items (children) inline */
+  justify-content: center; /* centers them horizontally */
+  align-items: center; /* and vertically */
+}
+
+.text p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
+  color: black;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.meBackground {
+  background-color: whitesmoke;
+  box-shadow: 0 0 3px whitesmoke;
+}
+
+
+/* mobile/iPhone5-SE */
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+  }
+
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+  }
+
+  b {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+    font-size: 5px;
+    color: black;
+  }
+
+  .img-thumb {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+  }
+
+  #training .img-thumb img {
+    border: 3px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    height: 60px;
+    width: 60px;
+  }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 8px;
+    color: black;
+    text-align: justify;
+  }
+}
+
+/* mobile/iPhone6-7-8 */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+  }
+
+  b {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+    font-size: 6px;
+    color: black;
+  }
+
+  .img-thumb {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+  }
+
+  #training .img-thumb img {
+    border: 3px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    height: 70px;
+    width: 70px;
+  }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 10px;
+    color: black;
+    text-align: justify;
+  }
+}
+
+/* mobile/iPhone6-7-8 Plus */
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .container {
+    width: 100%;
+  }
+
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+  }
+
+  b {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+    font-size: 7px;
+    color: black;
+  }
+
+  .img-thumb {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+  }
+
+  #training .img-thumb img {
+    border: 3px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    height: 80px;
+    width: 80px;
+  }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 12px;
+    color: black;
+    text-align: justify;
+  }
+}
+
+/* iPad */
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .about,
+  .services,
+  .resume,
+  .contact-form {
+    padding: 30px;
+  }
+  #training .img-thumb img {
+    border: 8px solid green;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    height: 170px;
+    width: 170px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+  }
+
+  b {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+    font-size: 15px;
+    color: black;
+  }
+
+  .img-thumb {
+    display: flex; /* display flex-items (children) inline */
+    justify-content: center; /* centers them horizontally */
+    align-items: center; /* and vertically */
+  }
+
+  .img-thumb {
+    padding-bottom: 0px;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+
+  .text p {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: black;
+    text-align: justify;
+  }
+}

@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PriceComponent } from './price/price.component';
 import { LoadingSpinnerComponent } from 'assets/shared/loading-spinner.component';
+import { TrainingComponent } from './training/training.component';
 
 
 
@@ -28,7 +29,8 @@ import { LoadingSpinnerComponent } from 'assets/shared/loading-spinner.component
     HeaderComponent,
     FooterComponent,
     PriceComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    TrainingComponent
   ],
   imports: [
     BrowserModule,

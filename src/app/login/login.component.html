@@ -168,7 +168,7 @@
                       loading2" color="primary" (click)="register2()">
                   {{buttionText2}}
                 </button>
-                <div class="col-sm-12" *ngIf="!loading2">
+                <div class="col-sm-12" *ngIf="loading2">
                   <app-loading-spinner></app-loading-spinner>
                 </div>
                 <div *ngIf="stadan2 === 'VILLA'">
