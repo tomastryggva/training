@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## About
 
-This app was created as a project for a up and coming personal trainer. The app features an about, trainingInfo, price and a submit-form.
+This website was created as a project for a newly graduated personal trainer. 
 The website is Live and can be found on lightweight.is
 
 ## Preview
