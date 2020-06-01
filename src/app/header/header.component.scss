@@ -14,6 +14,23 @@
       font-size: 14px;
     }
 
+
+.navbar-brand {
+  height: auto;
+  width: auto;
+  max-width: 250px;
+}
+
+.navbar-brand {
+  position: relative;
+  padding: 0px;
+}
+
+.top-nav-collapse .navbar-brand {
+  top: 0px;
+}
+
+
 #home {
   color: #fff;
   overflow: hidden;
@@ -97,7 +114,7 @@ dl, ol, ul {
 }
 
 .top-nav-collapse .navbar-brand img {
-  width: 60%;
+  width: 75%;
   margin: 5px;
 }
 
@@ -116,16 +133,101 @@ dl, ol, ul {
   color: #1d6734 !important;
 }
 
-.navbar-toggler {
-  display: none;
+//Testing fra styles
+.navbar-expand-lg .navbar-nav .nav-link i {
+  font-size: 28px;
+  color: #00b4d9;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.mobile-menu {
-  display: none;
+.navbar-expand-lg .navbar-nav .nav-link i:hover {
+  color: #21cff3;
 }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #333;
+  font-weight: 700;
+  padding: 0 17px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-expand-lg .navbar-nav li a:hover,
+.navbar-expand-lg .navbar-nav li .active > a,
+.navbar-expand-lg .navbar-nav li a:focus {
+  color: #00b4d9;
+  outline: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link i {
+  font-size: 28px;
+  color: green;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link i:hover {
+  color: #21cff3;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0 12px;
+  padding-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-expand-lg .navbar-nav li a:hover,
+.navbar-expand-lg .navbar-nav li .active > a,
+.navbar-expand-lg .navbar-nav li a:focus {
+  color: green;
+  outline: none;
+}
+
+
+.navbar {
+  padding: 0;
+}
+
+.navbar li.active a.nav-link {
+  color: green;
+}
+
 
 /* mobile/iPhone5-SE */
 @media screen and (max-width: 320px) {
+  .navbar-header {
+    width: 100%;
+  }
+  .navbar-brand {
+    position: absolute;
+    padding: 0px 15px;
+    top: 0;
+  }
+  .navbar-brand img {
+    width: 75%;
+  }
   .hero-area-bg {
     background-size: auto;
   }
@@ -167,13 +269,24 @@ dl, ol, ul {
     font-weight: 400;
     margin-bottom: 25px;
   }
-  // .mobile-menu {
-  //   display: block;
-  // }
+  .mobile-menu {
+    display: block;
+  }
 }
 
 /* mobile/iPhone6-7-8 */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .navbar-header {
+    width: 100%;
+  }
+  .navbar-brand {
+    position: absolute;
+    padding: 0px 15px;
+    top: 0;
+  }
+  .navbar-brand img {
+    width: 75%;
+  }
   .hero-area-bg {
     background-size: auto;
   }
@@ -219,6 +332,17 @@ dl, ol, ul {
 
 /* mobile/iPhone6-7-8 Plus */
 @media screen and (min-width: 376px) and (max-width: 414px) {
+  .navbar-header {
+    width: 100%;
+  }
+  .navbar-brand {
+    position: absolute;
+    padding: 0px 15px;
+    top: 0;
+  }
+  .navbar-brand img {
+    width: 75%;
+  }
   .hero-area-bg {
     background-size: auto;
   }
@@ -265,6 +389,17 @@ dl, ol, ul {
 
 /* iPad */
 @media screen and (min-width: 415px) and (max-width: 768px) {
+  .navbar-header {
+    width: 100%;
+  }
+  .navbar-brand {
+    position: absolute;
+    padding: 0px 15px;
+    top: 0;
+  }
+  .navbar-brand img {
+    width: 75%;
+  }
   .hero-area-bg {
     background-size: auto;
   }
