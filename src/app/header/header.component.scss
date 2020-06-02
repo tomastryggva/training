@@ -14,7 +14,9 @@
       font-size: 14px;
     }
 
-
+    .navbar {
+      padding: 0;
+    }
 .navbar-brand {
   height: auto;
   width: auto;
@@ -26,10 +28,6 @@
   padding: 0px;
 }
 
-.top-nav-collapse .navbar-brand {
-  top: 0px;
-}
-
 
 #home {
   color: #fff;
@@ -39,7 +37,6 @@
 }
 dl, ol, ul {
   margin-top: 0;
-  margin-bottom: 1rem;
   padding-left: 0px;
 }
 #home .contents {
@@ -85,24 +82,24 @@ dl, ol, ul {
   background: black;
 }
 
-.top-nav-collapse {
-  background: black;
-  z-index: 999999;
-  top: 0px !important;
-  min-height: 58px;
-  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  background: black !important;
-}
+// .top-nav-collapse {
+//   background: black;
+//   z-index: 999999;
+//   top: 0px !important;
+//   min-height: 58px;
+//   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
+//   -webkit-animation-duration: 1s;
+//   animation-duration: 1s;
+//   -webkit-animation-fill-mode: both;
+//   animation-fill-mode: both;
+//   -webkit-animation-name: fadeInDown;
+//   animation-name: fadeInDown;
+//   background: black !important;
+// }
 
-.top-nav-collapse .navbar-brand {
-  top: 0px;
-}
+// .top-nav-collapse .navbar-brand {
+//   top: 0px;
+// }
 
 .instagram {
   color: purple;
@@ -113,25 +110,25 @@ dl, ol, ul {
   font-size: large;
 }
 
-.top-nav-collapse .navbar-brand img {
-  width: 75%;
-  margin: 5px;
-}
+// .top-nav-collapse .navbar-brand img {
+//   width: 50%;
+//   margin: 5px;
+// }
 
-.top-nav-collapse .navbar-nav .nav-link {
-  color: #333 !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
+// .top-nav-collapse .navbar-nav .nav-link {
+//   color: #333 !important;
+//   margin-top: 0px !important;
+//   margin-bottom: 0px !important;
+// }
 
-.top-nav-collapse .navbar-nav .nav-link:hover {
-  cursor: pointer;
-  color: #1d6734 !important;
-}
+// .top-nav-collapse .navbar-nav .nav-link:hover {
+//   cursor: pointer;
+//   color: #1d6734 !important;
+// }
 
-.top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: #1d6734 !important;
-}
+// .top-nav-collapse .navbar-nav li.active a.nav-link {
+//   color: #1d6734 !important;
+// }
 
 //Testing fra styles
 .navbar-expand-lg .navbar-nav .nav-link i {
@@ -162,48 +159,25 @@ dl, ol, ul {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-expand-lg .navbar-nav li a:hover,
-.navbar-expand-lg .navbar-nav li .active > a,
-.navbar-expand-lg .navbar-nav li a:focus {
-  color: #00b4d9;
-  outline: none;
-}
+// .navbar-expand-lg .navbar-nav .nav-link i {
+//   font-size: 28px;
+//   color: green;
+//   vertical-align: middle;
+//   -webkit-transition: all 0.3s ease-in-out;
+//   -moz-transition: all 0.3s ease-in-out;
+//   transition: all 0.3s ease-in-out;
+// }
 
-.navbar-expand-lg .navbar-nav .nav-link i {
-  font-size: 28px;
-  color: green;
-  vertical-align: middle;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
+// .navbar-expand-lg .navbar-nav .nav-link i:hover {
+//   color: #21cff3;
+// }
 
-.navbar-expand-lg .navbar-nav .nav-link i:hover {
-  color: #21cff3;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-  color: #333;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 0 12px;
-  padding-top: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  cursor: pointer;
-  background: transparent;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.navbar-expand-lg .navbar-nav li a:hover,
-.navbar-expand-lg .navbar-nav li .active > a,
-.navbar-expand-lg .navbar-nav li a:focus {
-  color: green;
-  outline: none;
-}
+// .navbar-expand-lg .navbar-nav li a:hover,
+// .navbar-expand-lg .navbar-nav li .active > a,
+// .navbar-expand-lg .navbar-nav li a:focus {
+//   color: green;
+//   outline: none;
+// }
 
 
 .navbar {
@@ -226,7 +200,7 @@ dl, ol, ul {
     top: 0;
   }
   .navbar-brand img {
-    width: 75%;
+    width: 50%;
   }
   .hero-area-bg {
     background-size: auto;
@@ -269,9 +243,6 @@ dl, ol, ul {
     font-weight: 400;
     margin-bottom: 25px;
   }
-  .mobile-menu {
-    display: block;
-  }
 }
 
 /* mobile/iPhone6-7-8 */
@@ -285,7 +256,7 @@ dl, ol, ul {
     top: 0;
   }
   .navbar-brand img {
-    width: 75%;
+    width: 50%;
   }
   .hero-area-bg {
     background-size: auto;
@@ -341,7 +312,7 @@ dl, ol, ul {
     top: 0;
   }
   .navbar-brand img {
-    width: 75%;
+    width: 50%;
   }
   .hero-area-bg {
     background-size: auto;
@@ -398,7 +369,7 @@ dl, ol, ul {
     top: 0;
   }
   .navbar-brand img {
-    width: 75%;
+    width: 50%;
   }
   .hero-area-bg {
     background-size: auto;

@@ -238,12 +238,15 @@ a.back-to-top:hover, a.back-to-top:focus {
   display: none;
 }
 .navbar-brand img {
-  width: 75%;
+  width: 50%;
   margin: 5px;
 }
 @media screen and (max-width: 768px) {
   .navbar-header {
     width: 100%;
+  }
+  .navbar {
+    padding: 0;
   }
   .navbar-brand {
     position: absolute;
