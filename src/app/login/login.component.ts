@@ -8,7 +8,7 @@ import { HttpService } from '../http.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   constructor(public http: HttpService) {}
 
@@ -68,9 +68,6 @@ export class LoginComponent implements OnInit {
   imageUrl2 = '/assets/img/person.png';
   fileToUpload2: File = null;
 
-  ngOnInit() {
-    console.log(this.http.test);
-  }
 
   handleFileInput(file: FileList) {
     this.fileToUpload = file.item(0);
