@@ -1,24 +1,24 @@
 (function($) {
-  
-  "use strict";  
+
+  "use strict";
 
   $(window).on('load', function() {
 
-    /* 
+    /*
    MixitUp
    ========================================================================== */
   $('#portfolio').mixItUp();
 
-  /* 
+  /*
    One Page Navigation & wow js
    ========================================================================== */
     var OnePNav = $('.onepage-nev');
-    var top_offset = OnePNav.height() - -0;
+    var top_offset = OnePNav.height() - 20;
     OnePNav.onePageNav({
       currentClass: 'active',
       scrollOffset: top_offset,
     });
-  
+
   /*Page Loader active
     ========================================================*/
     $('#preloader').fadeOut();
@@ -43,6 +43,10 @@
         openedSymbol: '<i class="icon-arrow-down"></i>',
       });
 
+      $('.mobile-menu').click(function(){
+        $(".mobile-menu").collapse('hide');
+    });
+
       /* WOW Scroll Spy
     ========================================================*/
      var wow = new WOW({
@@ -52,7 +56,7 @@
 
     wow.init();
 
-    /* Nivo Lightbox 
+    /* Nivo Lightbox
     ========================================================*/
     $('.lightbox').nivoLightbox({
         effect: 'fadeScale',
@@ -89,6 +93,6 @@
 
 
 
-  });      
+  });
 
 }(jQuery));

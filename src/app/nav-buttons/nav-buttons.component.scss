@@ -11,6 +11,10 @@
   -o-transition: all 0.3s ease-in-out 0s;
 }
 
+.fake {
+  display: none;
+}
+
 .services-item .icon i {
   font-size: 42px;
   margin-bottom: 15px;

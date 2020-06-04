@@ -139,21 +139,22 @@ button:focus {
   background: #D6274D;
 }
 
+
 /* ScrollToTop */
 a.back-to-top {
   display: none;
   position: fixed;
-  bottom: 18px;
-  right: 15px;
+  bottom: 58px;
+  right: 50px;
   text-decoration: none;
 }
 
 a.back-to-top i {
   display: block;
-  font-size: 22px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   color: #fff;
   background: #1d6734;
   border-radius: 2px;
@@ -168,6 +169,37 @@ a.back-to-top i {
 a.back-to-top:hover, a.back-to-top:focus {
   text-decoration: none;
 }
+
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  a.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    text-decoration: none;
+  }
+
+  a.back-to-top i {
+    display: block;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background: #1d6734;
+    border-radius: 2px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+
+}
+
 
 .section-padding2 {
   padding: 30px 0;
@@ -195,8 +227,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .about, .services, .resume, .contact-form{
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 

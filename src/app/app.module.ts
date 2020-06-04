@@ -22,6 +22,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { DropdownDirective } from 'assets/shared/dropdown.directive';
+import { ClickOutsideModule } from 'ng-click-outside';
+
 
 
 
@@ -36,6 +39,7 @@ import { MatListModule } from '@angular/material/list';
     PriceComponent,
     LoadingSpinnerComponent,
     TrainingComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ClickOutsideModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
