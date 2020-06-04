@@ -5,30 +5,42 @@
         <div class="col-md-6 col-lg-6 col-sm-12">
           <h2>Umsókn í fjarþjálfun</h2>
           <div class="footer-right-area wow fadeIn">
-            <form style="width: 100%; margin: auto" id="myForm">
+            <form style="width: 100%; margin: auto;" id="myForm">
               <mat-card>
                 <h1>Fjarþjálfun</h1>
 
-                <mat-radio-group aria-labelledby="example-radio-group-label" class="radio-group" [(ngModel)]="maeling"
-                  [formControl]="maelingControl">
-
-                  <mat-radio-button class="radio-button" *ngFor="let maelingValins of maelingValin"
-                    [value]="maelingValins">
+                <mat-radio-group
+                  aria-labelledby="example-radio-group-label"
+                  class="radio-group"
+                  [(ngModel)]="maeling"
+                  [formControl]="maelingControl"
+                >
+                  <mat-radio-button
+                    class="radio-button"
+                    *ngFor="let maelingValins of maelingValin"
+                    [value]="maelingValins"
+                  >
                     {{ maelingValins }}
                   </mat-radio-button>
-
                 </mat-radio-group>
                 <!--<mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>-->
-                <div class="askrift" *ngIf="maeling === 'með mælingu'">Þú hefur valið áskrift <b>{{ maeling }}</b><br/>
+                <div class="askrift" *ngIf="maeling === 'með mælingu'">
+                  Þú hefur valið áskrift <b>{{ maeling }}</b
+                  ><br />
                   <b style="color: #1d6734;">17.000kr</b>
                 </div>
-                <div class="askrift" *ngIf="maeling === 'án mælingu'">Þú hefur valið áskrift <b>{{ maeling }}</b><br/>
+                <div class="askrift" *ngIf="maeling === 'án mælingu'">
+                  Þú hefur valið áskrift <b>{{ maeling }}</b
+                  ><br />
                   <b style="color: #1d6734;">14.000kr</b>
                 </div>
 
-
-                <mat-form-field style="width: 80%">
-                  <input matInput placeholder="Fullt nafn" [formControl]="nameFormControl" />
+                <mat-form-field style="width: 80%;">
+                  <input
+                    matInput
+                    placeholder="Fullt nafn"
+                    [formControl]="nameFormControl"
+                  />
                   <mat-error *ngIf="nameFormControl.hasError('minlength')">
                     Skrá fullt nafn
                   </mat-error>
@@ -37,8 +49,12 @@
                   </mat-error>
                 </mat-form-field>
                 <br />
-                <mat-form-field style="width: 80%">
-                  <input matInput placeholder="Aldur" [formControl]="ageFormControl" />
+                <mat-form-field style="width: 80%;">
+                  <input
+                    matInput
+                    placeholder="Aldur"
+                    [formControl]="ageFormControl"
+                  />
                   <mat-error *ngIf="ageFormControl.hasError('minlength')">
                     Lágmarks aldur er 16 ára
                   </mat-error>
@@ -47,8 +63,12 @@
                   </mat-error>
                 </mat-form-field>
                 <br />
-                <mat-form-field style="width: 80%">
-                  <input matInput placeholder="Netfang" [formControl]="emailFormControl" />
+                <mat-form-field style="width: 80%;">
+                  <input
+                    matInput
+                    placeholder="Netfang"
+                    [formControl]="emailFormControl"
+                  />
                   <mat-error *ngIf="emailFormControl.hasError('email')">
                     Skráðu inn þitt netfang
                   </mat-error>
@@ -57,33 +77,61 @@
                   </mat-error>
                 </mat-form-field>
                 <br />
-                <form #imageForm=ngForm>
-                  <img [src]="imageUrl" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;margin-left:5px;">
-                  <span class="myndOption">Mynd (valmöguleiki)*</span><br/>
-                  <button mat-stroked-button type="button" (click)="Image.click()">Velja mynd</button>
-                  <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"
-                    [formControl]="myndControl">
-
+                <form #imageForm="ngForm">
+                  <img
+                    [src]="imageUrl"
+                    style="
+                      width: 90px;
+                      height: 90px;
+                      margin-top: 10px;
+                      margin-bottom: 10px;
+                      margin-left: 5px;
+                    "
+                  />
+                  <span class="myndOption">Mynd (valmöguleiki)*</span><br />
+                  <button
+                    mat-stroked-button
+                    type="button"
+                    (click)="Image.click()"
+                  >
+                    Velja mynd
+                  </button>
+                  <input
+                    type="file"
+                    #Image
+                    accept="image/*"
+                    (change)="handleFileInput($event.target.files)"
+                    [formControl]="myndControl"
+                  />
                 </form>
-                <hr/>
-                <button id="myBtn" class="col" mat-raised-button [disabled]="emailFormControl.invalid ||
-                      nameFormControl.invalid ||
-                      maelingControl.invalid ||
-                      ageFormControl.invalid ||
-                      loading" color="primary" (click)="register()">
-                  {{buttionText}}
+                <hr />
+                <button
+                  id="myBtn"
+                  class="col"
+                  mat-raised-button
+                  [disabled]="
+                    emailFormControl.invalid ||
+                    nameFormControl.invalid ||
+                    maelingControl.invalid ||
+                    ageFormControl.invalid ||
+                    loading
+                  "
+                  color="primary"
+                  (click)="register()"
+                >
+                  {{ buttionText }}
                 </button>
                 <div class="col-sm-12" *ngIf="loading">
                   <app-loading-spinner></app-loading-spinner>
                 </div>
                 <div *ngIf="stadan1 === 'VILLA'">
                   <hr />
-                  <b style=color:red>Ekki tókst að senda umsókn</b><br />
+                  <b style="color: red;">Ekki tókst að senda umsókn</b><br />
                   <span>Vinsamlegast reyndu aftur</span>
                 </div>
                 <div *ngIf="stadan1 === 'tokst'">
                   <hr />
-                  <b style=color:#1d6734>Umsókn tókst</b><br />
+                  <b style="color: #1d6734;">Umsókn tókst</b><br />
                   <span>Staðfesting hefur verið send á þitt netfang</span>
                 </div>
               </mat-card>
@@ -95,35 +143,45 @@
         <div class="col-md-6 col-lg-6 col-sm-12">
           <div class="footer-right-area wow fadeIn">
             <h2>Umsókn í einkaþjálfun</h2>
-            <form style="width: 100%; margin: auto">
+            <form style="width: 100%; margin: auto;">
               <mat-card>
                 <h1>Einkaþjálfun</h1>
 
-
-                <mat-radio-group aria-labelledby="example-radio-group-label" class="radio-group" [(ngModel)]="validVerd"
-                  [formControl]="verdControl">
-
-                  <mat-radio-button class="radio-button" *ngFor="let verds of verd" [value]="verds">
+                <mat-radio-group
+                  aria-labelledby="example-radio-group-label"
+                  class="radio-group"
+                  [(ngModel)]="validVerd"
+                  [formControl]="verdControl"
+                >
+                  <mat-radio-button
+                    class="radio-button"
+                    *ngFor="let verds of verd"
+                    [value]="verds"
+                  >
                     {{ verds }}
                   </mat-radio-button>
-
                 </mat-radio-group>
                 <!-- <mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>-->
-                <div class="askrift" *ngIf="validVerd === '1-3x í viku'">Þú hefur valið áskrift að andvirði:
-                  <b>50.000kr</b><br/>
+                <div class="askrift" *ngIf="validVerd === '1-3x í viku'">
+                  Þú hefur valið áskrift að andvirði: <b>50.000kr</b><br />
                   <b style="color: #1d6734;">{{ validVerd }}</b>
                 </div>
-                <div class="askrift" *ngIf="validVerd === '4x í viku'">Þú hefur valið áskrift að andvirði:
-                  <b>65.000kr</b><br/>
+                <div class="askrift" *ngIf="validVerd === '4x í viku'">
+                  Þú hefur valið áskrift að andvirði: <b>65.000kr</b><br />
                   <b style="color: #1d6734;">{{ validVerd }}</b>
                 </div>
-                <div class="askrift" *ngIf="validVerd === '5x í viku'">Þú hefur valið áskrift að andvirði:
-                  <b>80.000kr</b><br/>
+                <div class="askrift" *ngIf="validVerd === '5x í viku'">
+                  Þú hefur valið áskrift að andvirði: <b>80.000kr</b><br />
                   <b style="color: #1d6734;">{{ validVerd }}</b>
                 </div>
 
-                <mat-form-field style="width: 80%;outline: none">
-                  <input style="outline: none;" matInput placeholder="Fullt nafn" [formControl]="nameFormControl2" />
+                <mat-form-field style="width: 80%; outline: none;">
+                  <input
+                    style="outline: none;"
+                    matInput
+                    placeholder="Fullt nafn"
+                    [formControl]="nameFormControl2"
+                  />
                   <mat-error *ngIf="nameFormControl2.hasError('minlength')">
                     Skrá fullt nafn
                   </mat-error>
@@ -132,8 +190,12 @@
                   </mat-error>
                 </mat-form-field>
                 <br />
-                <mat-form-field style="width: 80%">
-                  <input matInput placeholder="Aldur" [formControl]="ageFormControl2" />
+                <mat-form-field style="width: 80%;">
+                  <input
+                    matInput
+                    placeholder="Aldur"
+                    [formControl]="ageFormControl2"
+                  />
                   <mat-error *ngIf="ageFormControl2.hasError('minlength')">
                     Lágmarks aldur er 16 ára
                   </mat-error>
@@ -142,8 +204,12 @@
                   </mat-error>
                 </mat-form-field>
                 <br />
-                <mat-form-field style="width: 80%">
-                  <input matInput placeholder="Netfang" [formControl]="emailFormControl2" />
+                <mat-form-field style="width: 80%;">
+                  <input
+                    matInput
+                    placeholder="Netfang"
+                    [formControl]="emailFormControl2"
+                  />
                   <mat-error *ngIf="emailFormControl2.hasError('email')">
                     Skráðu inn þitt netfang
                   </mat-error>
@@ -153,32 +219,60 @@
                 </mat-form-field>
                 <br />
 
-                <form #imageForm=ngForm>
-                  <img [src]="imageUrl2" style="width:90px;height:90px;margin-top:10px;margin-bottom:10px;margin-left:5px;">
-                  <span class="myndOption">Mynd (valmöguleiki)*</span><br/>
-                  <button mat-stroked-button type="button" (click)="Image2.click()">Velja mynd</button>
-                  <input type="file" #Image2 accept="image/*" (change)="handleFileInput2($event.target.files)"
-                    [formControl]="myndControl2">
+                <form #imageForm="ngForm">
+                  <img
+                    [src]="imageUrl2"
+                    style="
+                      width: 90px;
+                      height: 90px;
+                      margin-top: 10px;
+                      margin-bottom: 10px;
+                      margin-left: 5px;
+                    "
+                  />
+                  <span class="myndOption">Mynd (valmöguleiki)*</span><br />
+                  <button
+                    mat-stroked-button
+                    type="button"
+                    (click)="Image2.click()"
+                  >
+                    Velja mynd
+                  </button>
+                  <input
+                    type="file"
+                    #Image2
+                    accept="image/*"
+                    (change)="handleFileInput2($event.target.files)"
+                    [formControl]="myndControl2"
+                  />
                 </form>
-                <hr/>
-                <button class="col" mat-raised-button [disabled]="emailFormControl2.invalid ||
-                      nameFormControl2.invalid ||
-                      verdControl.invalid ||
-                      ageFormControl2.invalid ||
-                      loading2" color="primary" (click)="register2()">
-                  {{buttionText2}}
+                <hr />
+                <button
+                  class="col"
+                  mat-raised-button
+                  [disabled]="
+                    emailFormControl2.invalid ||
+                    nameFormControl2.invalid ||
+                    verdControl.invalid ||
+                    ageFormControl2.invalid ||
+                    loading2
+                  "
+                  color="primary"
+                  (click)="register2()"
+                >
+                  {{ buttionText2 }}
                 </button>
                 <div class="col-sm-12" *ngIf="loading2">
                   <app-loading-spinner></app-loading-spinner>
                 </div>
                 <div *ngIf="stadan2 === 'VILLA'">
                   <hr />
-                  <b style=color:red>Ekki tókst að senda umsókn</b><br />
+                  <b style="color: red;">Ekki tókst að senda umsókn</b><br />
                   <span>Vinsamlegast reyndu aftur</span>
                 </div>
                 <div *ngIf="stadan2 === 'tokst'">
                   <hr />
-                  <b style=color:#1d6734>Umsókn tókst</b><br />
+                  <b style="color: #1d6734;">Umsókn tókst</b><br />
                   <span>Staðfesting hefur verið send á þitt netfang</span>
                 </div>
               </mat-card>
@@ -186,8 +280,10 @@
           </div>
         </div>
         <div class="col-md-12">
-          <object style="padding-top:60px; border:0; height: 500px; width: 100%;"
-            data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.9350516946408!2d-21.881000083473733!3d64.14508518359455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674ea917b6645%3A0xd45bed37d4c41289!2sWorld%20Class!5e0!3m2!1sen!2sis!4v1580862479850!5m2!1sen!2sis"></object>
+          <object
+            style="padding-top: 60px; border: 0; height: 500px; width: 100%;"
+            data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.9350516946408!2d-21.881000083473733!3d64.14508518359455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674ea917b6645%3A0xd45bed37d4c41289!2sWorld%20Class!5e0!3m2!1sen!2sis!4v1580862479850!5m2!1sen!2sis"
+          ></object>
         </div>
       </div>
     </div>

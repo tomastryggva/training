@@ -13,7 +13,7 @@
    One Page Navigation & wow js
    ========================================================================== */
     var OnePNav = $('.onepage-nev');
-    var top_offset = OnePNav.height() - 20;
+    var top_offset = OnePNav.height() - -65;
     OnePNav.onePageNav({
       currentClass: 'active',
       scrollOffset: top_offset,

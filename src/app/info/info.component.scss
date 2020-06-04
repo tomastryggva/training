@@ -63,12 +63,14 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-ul, ol {
+ul,
+ol {
   list-style: outside none none;
   margin: 0;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   list-style: none;
 }
 .about-profile .pro-title:after {

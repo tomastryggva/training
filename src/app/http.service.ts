@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class HttpService {
   constructor(private http: HttpClient) {}
@@ -12,7 +12,7 @@ export class HttpService {
   }
 
   httpPost(url, {}) {
-    return this.http.post(url, { name: 'Agnar' });
+    return this.http.post(url, { name: "Agnar" });
   }
 
   sendEmail(url, data) {

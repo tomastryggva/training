@@ -7,16 +7,16 @@
 //   box-shadow: 0 0 10px black;
 // }
 
-    #home .contents .head-title {
-      font-size: 80px;
-    }
-    .services-item .services-content h3 a {
-      font-size: 14px;
-    }
+#home .contents .head-title {
+  font-size: 80px;
+}
+.services-item .services-content h3 a {
+  font-size: 14px;
+}
 
-    .navbar {
-      padding: 0;
-    }
+.navbar {
+  padding: 0;
+}
 .navbar-brand {
   height: auto;
   width: auto;
@@ -28,14 +28,15 @@
   padding: 0px;
 }
 
-
 #home {
   color: #fff;
   overflow: hidden;
   position: relative;
   height: 600px;
 }
-dl, ol, ul {
+dl,
+ol,
+ul {
   margin-top: 0;
   padding-left: 0px;
 }
@@ -179,7 +180,6 @@ dl, ol, ul {
 //   outline: none;
 // }
 
-
 .navbar {
   padding: 0;
 }
@@ -187,7 +187,6 @@ dl, ol, ul {
 .navbar li.active a.nav-link {
   color: green;
 }
-
 
 /* mobile/iPhone5-SE */
 @media screen and (max-width: 320px) {
@@ -217,10 +216,10 @@ dl, ol, ul {
   }
 
   #home .contents .script-fonts {
-        height: 75px;
-        width: 200px;
-      }
-      #home {
+    height: 75px;
+    width: 200px;
+  }
+  #home {
     color: #fff;
     overflow: hidden;
     position: relative;
@@ -279,10 +278,10 @@ dl, ol, ul {
   }
 
   #home .contents .script-fonts {
-        height: 75px;
-        width: 200px;
-      }
-      #home .contents .head-title {
+    height: 75px;
+    width: 200px;
+  }
+  #home .contents .head-title {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 700;
@@ -335,10 +334,10 @@ dl, ol, ul {
   }
 
   #home .contents .script-fonts {
-        height: 70px;
-        width: 200px;
-      }
-      #home .contents .head-title {
+    height: 70px;
+    width: 200px;
+  }
+  #home .contents .head-title {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 700;
@@ -356,7 +355,6 @@ dl, ol, ul {
     margin-bottom: 25px;
   }
 }
-
 
 /* iPad */
 @media screen and (min-width: 415px) and (max-width: 768px) {
@@ -392,10 +390,10 @@ dl, ol, ul {
   }
 
   #home .contents .script-fonts {
-        height: 130px;
-        width: 500px;
-      }
-      #home .contents .head-title {
+    height: 130px;
+    width: 500px;
+  }
+  #home .contents .head-title {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 700;
@@ -437,10 +435,10 @@ dl, ol, ul {
   }
 
   #home .contents .script-fonts {
-        height: 130px;
-        width: 500px;
-      }
-      #home .contents .head-title {
+    height: 130px;
+    width: 500px;
+  }
+  #home .contents .head-title {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 700;

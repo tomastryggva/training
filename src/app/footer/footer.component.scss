@@ -1,135 +1,137 @@
 .footer-area {
-    background: black;
-  }
+  background: black;
+}
 
-  .footer-area .footer-text p {
-    font-size: 14px;
-    margin-top: 20px;
-    color: #fff;
-  }
+.footer-area .footer-text p {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #fff;
+}
 
-  .footer-area .footer-text p a {
-    color: #00b4d9;
-  }
-  dl, ol, ul {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    padding-left: 0px;
-  }
+.footer-area .footer-text p a {
+  color: #00b4d9;
+}
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 0px;
+}
 
-  .footer-area .footer-text .nav-inline .nav-link {
-    padding: 11px 7px;
-    color: #888;
-  }
+.footer-area .footer-text .nav-inline .nav-link {
+  padding: 11px 7px;
+  color: #888;
+}
 
-  .footer-area .footer-text .nav-inline .nav-link:hover {
-    color: #00b4d9;
-  }
+.footer-area .footer-text .nav-inline .nav-link:hover {
+  color: #00b4d9;
+}
 
-  .footer-2 {
-    background: #252525;
-  }
+.footer-2 {
+  background: #252525;
+}
 
-  .footer-2 img {
-    margin-top: -8px;
-  }
+.footer-2 img {
+  margin-top: -8px;
+}
 
-  .footer-2 h3 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700;
-    padding-bottom: 10px;
-    letter-spacing: 0.5px;
-  }
+.footer-2 h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
 
-  .footer-2 p {
-    font-size: 14px;
-    color: #fff;
-    line-height: 20px;
-    margin: 0;
-    padding-right: 50px;
-  }
+.footer-2 p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+  margin: 0;
+  padding-right: 50px;
+}
 
-  .footer-2 ul li a {
-    color: #fff;
-    font-size: 13px;
-    font-weight: 400;
-  }
+.footer-2 ul li a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+}
 
-  .footer-2 ul li a:hover {
-    color: #00b4d9;
-  }
+.footer-2 ul li a:hover {
+  color: #00b4d9;
+}
 
-  .footer-right-contact {
-    padding: 4px;
-    border: 1px solid #e1e1e1;
-    margin-top: 30px;
-  }
+.footer-right-contact {
+  padding: 4px;
+  border: 1px solid #e1e1e1;
+  margin-top: 30px;
+}
 
-  .footer-right-contact .single-contact {
-    margin: 10px 22px;
-    padding: 3px 55px;
-    position: relative;
-    color: #666;
-  }
+.footer-right-contact .single-contact {
+  margin: 10px 22px;
+  padding: 3px 55px;
+  position: relative;
+  color: #666;
+}
 
-  .footer-right-contact .single-contact p {
-    margin-bottom: 5px;
-  }
+.footer-right-contact .single-contact p {
+  margin-bottom: 5px;
+}
 
-  .footer-right-contact .single-contact p a {
-    color: #666;
-  }
+.footer-right-contact .single-contact p a {
+  color: #666;
+}
 
-  .footer-right-contact .contact-icon {
-    background: #00b4d9;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 20px;
-    height: 40px;
-    left: 0;
-    padding-top: 8px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 40px;
-  }
+.footer-right-contact .contact-icon {
+  background: #00b4d9;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  height: 40px;
+  left: 0;
+  padding-top: 8px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 40px;
+}
 
-  .footer-text img{
-    height:80px;
-    width: 250px;
-  }
+.footer-text img {
+  height: 80px;
+  width: 250px;
+}
 
-  /* mobile/iPhone5-SE */
+/* mobile/iPhone5-SE */
 @media screen and (max-width: 320px) {
-  .footer-text img{
-    height:60px;
+  .footer-text img {
+    height: 60px;
     width: 170px;
   }
 }
 
 /* mobile/iPhone6-7-8 */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-  .footer-text img{
-    height:70px;
+  .footer-text img {
+    height: 70px;
     width: 200px;
   }
 }
 
 /* mobile/iPhone6-7-8 Plus */
 @media screen and (min-width: 376px) and (max-width: 414px) {
-  .footer-text img{
-    height:80px;
+  .footer-text img {
+    height: 80px;
     width: 250px;
   }
 }
 
 /* iPad */
 @media screen and (min-width: 415px) and (max-width: 768px) {
-  .footer-text img{
-    height:80px;
+  .footer-text img {
+    height: 80px;
     width: 180px;
   }
 }
