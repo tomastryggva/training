@@ -27,12 +27,18 @@
                 <div class="askrift" *ngIf="maeling === 'með mælingu'">
                   Þú hefur valið áskrift <b>{{ maeling }}</b
                   ><br />
-                  <b style="color: #1d6734;">17.000kr</b>
+                  <del style="color: red;">
+                    <b style="color: #1d6734; padding-right: 5px;">17.000 kr.-</b>
+                  </del>
+                  <b style="color: #1d6734;">13.600kr</b>
                 </div>
                 <div class="askrift" *ngIf="maeling === 'án mælingu'">
                   Þú hefur valið áskrift <b>{{ maeling }}</b
                   ><br />
-                  <b style="color: #1d6734;">14.000kr</b>
+                  <del style="color: red;">
+                    <b style="color: #1d6734; padding-right: 5px;">14.000 kr.-</b>
+                  </del>
+                  <b style="color: #1d6734;">11.200kr</b>
                 </div>
 
                 <mat-form-field style="width: 80%;">
@@ -163,15 +169,26 @@
                 </mat-radio-group>
                 <!-- <mat-error *ngIf="cartoonControl.hasError('required')">Vinsamlegast veldu áskrift</mat-error>-->
                 <div class="askrift" *ngIf="validVerd === '1-3x í viku'">
-                  Þú hefur valið áskrift að andvirði: <b>50.000kr</b><br />
+                  Þú hefur valið áskrift að andvirði:
+                  <del style="color: red;">
+                    <b style="color: black; padding-right: 5px;">50.000 kr.-</b> </del
+                  ><b>40.000kr</b><br />
                   <b style="color: #1d6734;">{{ validVerd }}</b>
                 </div>
                 <div class="askrift" *ngIf="validVerd === '4x í viku'">
-                  Þú hefur valið áskrift að andvirði: <b>65.000kr</b><br />
+                  Þú hefur valið áskrift að andvirði:
+                  <del style="color: red;">
+                    <b style="color: black; padding-right: 5px;">65.000 kr.-</b>
+                  </del>
+                  <b>52.000kr</b><br />
                   <b style="color: #1d6734;">{{ validVerd }}</b>
                 </div>
                 <div class="askrift" *ngIf="validVerd === '5x í viku'">
-                  Þú hefur valið áskrift að andvirði: <b>80.000kr</b><br />
+                  Þú hefur valið áskrift að andvirði:
+                  <del style="color: red;">
+                    <b style="color: black; padding-right: 5px;">80.000 kr.-</b>
+                  </del>
+                  <b>64.000kr</b><br />
                   <b style="color: #1d6734;">{{ validVerd }}</b>
                 </div>
 

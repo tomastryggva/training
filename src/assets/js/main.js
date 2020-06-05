@@ -43,8 +43,16 @@
         openedSymbol: '<i class="icon-arrow-down"></i>',
       });
 
-      $('.mobile-menu').click(function(){
-        $(".mobile-menu").collapse('hide');
+    /* slicknav mobile menu close  */
+    $("html").on('click',function() {
+      if(!$(event.target).hasClass(".menu a") &&
+      !$(event.target).hasClass("ul.slicknav_nav li a") &&
+      !$(event.target).hasClass("slicknav_menutxt") &&
+      !$(event.target).hasClass("slicknav_icon") &&
+      !$(event.target).hasClass("slicknav_icon-bar") &&
+      !$(event.target).hasClass("slicknav_btn")) {
+      $('.onepage-nev').slicknav('close');
+    }
     });
 
       /* WOW Scroll Spy
