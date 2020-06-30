@@ -1,67 +1,67 @@
-import { Component } from "@angular/core";
-import { FormControl, Validators } from "@angular/forms";
-import { HttpService } from "../http.service";
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { HttpService } from '../http.service';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   constructor(public http: HttpService) {}
 
   validVerd: string;
-  verd: string[] = ["1-3x í viku", "4x í viku", "5x í viku"];
-  verdControl = new FormControl("", [Validators.required]);
+  verd: string[] = ['1-3x í viku', '4x í viku', '5x í viku'];
+  verdControl = new FormControl('', [Validators.required]);
 
   maeling: string;
-  maelingValin: string[] = ["með mælingu", "án mælingu"];
-  maelingControl = new FormControl("", [Validators.required]);
+  maelingValin: string[] = ['með mælingu', 'án mælingu'];
+  maelingControl = new FormControl('', [Validators.required]);
 
-  myndControl = new FormControl("");
-  myndControl2 = new FormControl("");
+  myndControl = new FormControl('');
+  myndControl2 = new FormControl('');
 
   loading = false;
   loading2 = false;
-  buttionText = "Senda umsókn";
-  buttionText2 = "Senda umsókn";
-  stadan1 = "";
-  stadan2 = "";
+  buttionText = 'Senda umsókn';
+  buttionText2 = 'Senda umsókn';
+  stadan1 = '';
+  stadan2 = '';
 
-  emailFormControl = new FormControl("", [
+  emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
   ]);
 
-  nameFormControl = new FormControl("", [
+  nameFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(2),
   ]);
 
-  ageFormControl = new FormControl("", [
+  ageFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(2),
   ]);
 
-  emailFormControl2 = new FormControl("", [
+  emailFormControl2 = new FormControl('', [
     Validators.required,
     Validators.email,
   ]);
 
-  nameFormControl2 = new FormControl("", [
+  nameFormControl2 = new FormControl('', [
     Validators.required,
     Validators.minLength(2),
   ]);
 
-  ageFormControl2 = new FormControl("", [
+  ageFormControl2 = new FormControl('', [
     Validators.required,
     Validators.minLength(2),
   ]);
 
-  imageUrl = "/assets/img/person.png";
+  imageUrl = '/assets/img/person.png';
   fileToUpload: File = null;
 
-  imageUrl2 = "/assets/img/person.png";
+  imageUrl2 = '/assets/img/person.png';
   fileToUpload2: File = null;
 
   handleFileInput(file: FileList) {
@@ -76,9 +76,9 @@ export class LoginComponent {
 
   register() {
     this.loading = true;
-    this.buttionText = "Umsókn sendist...";
+    this.buttionText = 'Umsókn sendist...';
     const user = {
-      verk: "Beiðni um fjarþjálfun",
+      verk: 'Beiðni um fjarþjálfun',
       name: this.nameFormControl.value,
       email: this.emailFormControl.value,
       age: this.ageFormControl.value,
@@ -87,22 +87,22 @@ export class LoginComponent {
     };
 
     this.http
-      .sendEmail("https://testareactdot.herokuapp.com/sendmail", user)
+      .sendEmail('https://testareactdot.herokuapp.com/sendmail', user)
       .subscribe(
         (data) => {
           const res: any = data;
-          console.log("Success!");
+          console.log('Success!');
         },
         (err) => {
           console.log(err);
           this.loading = false;
-          this.buttionText = "Senda umsókn";
-          this.stadan1 = "VILLA";
+          this.buttionText = 'Senda umsókn';
+          this.stadan1 = 'VILLA';
         },
         () => {
           this.loading = false;
-          this.buttionText = "Senda umsókn";
-          this.stadan1 = "tokst";
+          this.buttionText = 'Senda umsókn';
+          this.stadan1 = 'tokst';
         }
       );
 
@@ -112,7 +112,7 @@ export class LoginComponent {
     this.maelingControl.reset();
     this.myndControl.reset();
 
-    this.imageUrl = "/assets/img/person.png";
+    this.imageUrl = '/assets/img/person.png';
   }
 
   handleFileInput2(file: FileList) {
@@ -127,9 +127,9 @@ export class LoginComponent {
 
   register2() {
     this.loading2 = true;
-    this.buttionText2 = "Umsókn sendist...";
+    this.buttionText2 = 'Umsókn sendist...';
     const user = {
-      verk: "Beiðni um einkaþjálfun",
+      verk: 'Beiðni um einkaþjálfun',
       name: this.nameFormControl2.value,
       email: this.emailFormControl2.value,
       age: this.ageFormControl2.value,
@@ -137,22 +137,22 @@ export class LoginComponent {
       image: this.imageUrl2,
     };
     this.http
-      .sendEmail("https://testareactdot.herokuapp.com/sendmail", user)
+      .sendEmail('https://testareactdot.herokuapp.com/sendmail', user)
       .subscribe(
         (data) => {
           const res: any = data;
-          console.log("Success!");
+          console.log('Success!');
         },
         (err) => {
           console.log(err);
           this.loading2 = false;
-          this.buttionText2 = "Senda umsókn";
-          this.stadan2 = "VILLA";
+          this.buttionText2 = 'Senda umsókn';
+          this.stadan2 = 'VILLA';
         },
         () => {
           this.loading2 = false;
-          this.buttionText2 = "Senda umsókn";
-          this.stadan2 = "tokst";
+          this.buttionText2 = 'Senda umsókn';
+          this.stadan2 = 'tokst';
         }
       );
 
@@ -162,6 +162,6 @@ export class LoginComponent {
     this.verdControl.reset();
     this.myndControl2.reset();
 
-    this.imageUrl2 = "/assets/img/person.png";
+    this.imageUrl2 = '/assets/img/person.png';
   }
 }

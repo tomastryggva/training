@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "app-nav-buttons",
-  templateUrl: "./nav-buttons.component.html",
-  styleUrls: ["./nav-buttons.component.scss"],
+  selector: 'app-nav-buttons',
+  templateUrl: './nav-buttons.component.html',
+  styleUrls: ['./nav-buttons.component.scss'],
 })
 export class NavButtonsComponent {}
