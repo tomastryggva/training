@@ -2,11 +2,6 @@
   background-size: cover;
 }
 
-// .headerBackground {
-//   background-color: black;
-//   box-shadow: 0 0 10px black;
-// }
-
 #home .contents .head-title {
   font-size: 80px;
 }
@@ -83,25 +78,6 @@ ul {
   background: black;
 }
 
-// .top-nav-collapse {
-//   background: black;
-//   z-index: 999999;
-//   top: 0px !important;
-//   min-height: 58px;
-//   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-//   -webkit-animation-duration: 1s;
-//   animation-duration: 1s;
-//   -webkit-animation-fill-mode: both;
-//   animation-fill-mode: both;
-//   -webkit-animation-name: fadeInDown;
-//   animation-name: fadeInDown;
-//   background: black !important;
-// }
-
-// .top-nav-collapse .navbar-brand {
-//   top: 0px;
-// }
-
 .instagram {
   color: purple;
   font-size: large;
@@ -110,26 +86,6 @@ ul {
 .facebook {
   font-size: large;
 }
-
-// .top-nav-collapse .navbar-brand img {
-//   width: 50%;
-//   margin: 5px;
-// }
-
-// .top-nav-collapse .navbar-nav .nav-link {
-//   color: #333 !important;
-//   margin-top: 0px !important;
-//   margin-bottom: 0px !important;
-// }
-
-// .top-nav-collapse .navbar-nav .nav-link:hover {
-//   cursor: pointer;
-//   color: #1d6734 !important;
-// }
-
-// .top-nav-collapse .navbar-nav li.active a.nav-link {
-//   color: #1d6734 !important;
-// }
 
 //Testing fra styles
 .navbar-expand-lg .navbar-nav .nav-link i {
@@ -146,7 +102,7 @@ ul {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  color: #333;
+  color: whitesmoke;
   font-weight: 700;
   padding: 0 17px;
   margin-top: 15px;
@@ -159,26 +115,6 @@ ul {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-// .navbar-expand-lg .navbar-nav .nav-link i {
-//   font-size: 28px;
-//   color: green;
-//   vertical-align: middle;
-//   -webkit-transition: all 0.3s ease-in-out;
-//   -moz-transition: all 0.3s ease-in-out;
-//   transition: all 0.3s ease-in-out;
-// }
-
-// .navbar-expand-lg .navbar-nav .nav-link i:hover {
-//   color: #21cff3;
-// }
-
-// .navbar-expand-lg .navbar-nav li a:hover,
-// .navbar-expand-lg .navbar-nav li .active > a,
-// .navbar-expand-lg .navbar-nav li a:focus {
-//   color: green;
-//   outline: none;
-// }
 
 .navbar {
   padding: 0;

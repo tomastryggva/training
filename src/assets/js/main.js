@@ -4,16 +4,12 @@
 
   $(window).on('load', function() {
 
-    /*
-   MixitUp
-   ========================================================================== */
-  $('#portfolio').mixItUp();
 
   /*
    One Page Navigation & wow js
    ========================================================================== */
     var OnePNav = $('.onepage-nev');
-    var top_offset = OnePNav.height() - -65;
+    var top_offset = OnePNav.height() - 40;
     OnePNav.onePageNav({
       currentClass: 'active',
       scrollOffset: top_offset,
@@ -64,19 +60,6 @@
 
     wow.init();
 
-    /* Nivo Lightbox
-    ========================================================*/
-    $('.lightbox').nivoLightbox({
-        effect: 'fadeScale',
-        keyboardNav: true,
-      });
-
-    /* Counter
-    ========================================================*/
-    $('.counterUp').counterUp({
-     delay: 10,
-     time: 1000
-    });
 
 
     /* Back Top Link active

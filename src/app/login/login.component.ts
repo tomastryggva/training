@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { HttpService } from "../http.service";
 
@@ -25,7 +25,6 @@ export class LoginComponent {
   loading2 = false;
   buttionText = "Senda umsókn";
   buttionText2 = "Senda umsókn";
-  buttionText22 = "Senda umsókn";
   stadan1 = "";
   stadan2 = "";
 
@@ -78,7 +77,6 @@ export class LoginComponent {
   register() {
     this.loading = true;
     this.buttionText = "Umsókn sendist...";
-    console.log(this.imageUrl);
     const user = {
       verk: "Beiðni um fjarþjálfun",
       name: this.nameFormControl.value,
@@ -92,11 +90,8 @@ export class LoginComponent {
       .sendEmail("https://testareactdot.herokuapp.com/sendmail", user)
       .subscribe(
         (data) => {
-          console.log("HELLO!");
           const res: any = data;
-          console.log(
-            `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
-          );
+          console.log("Success!");
         },
         (err) => {
           console.log(err);
@@ -145,11 +140,8 @@ export class LoginComponent {
       .sendEmail("https://testareactdot.herokuapp.com/sendmail", user)
       .subscribe(
         (data) => {
-          console.log("HELLO!");
           const res: any = data;
-          console.log(
-            `👏 > 👏 > 👏 > 👏 ${user.verd} is successfully register and mail has been sent and the message id is ${res.messageId}`
-          );
+          console.log("Success!");
         },
         (err) => {
           console.log(err);

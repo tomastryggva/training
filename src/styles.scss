@@ -149,10 +149,10 @@ a.back-to-top {
 
 a.back-to-top i {
   display: block;
-  font-size: 32px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  font-size: 29px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   color: #fff;
   background: #1d6734;
   border-radius: 2px;
@@ -227,6 +227,12 @@ a.back-to-top:focus {
 .services,
 .resume,
 .contact-form {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+.services {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -304,11 +310,6 @@ a.back-to-top:focus {
   }
 }
 
-/*!
- * SlickNav Responsive Mobile Menu v1.0.3
- * (c) 2015 Josh Cope
- * licensed under MIT
- */
 .slicknav_btn {
   cursor: pointer;
   display: block;
@@ -317,7 +318,6 @@ a.back-to-top:focus {
   line-height: 50px;
   padding: 10px 0 9px;
   position: relative;
-  vertical-align: middle;
   width: 44px;
 }
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {

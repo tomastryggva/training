@@ -7,15 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  httpGet(url) {
-    return this.http.get(url);
-  }
-
-  httpPost(url, {}) {
-    return this.http.post(url, { name: "Agnar" });
-  }
-
-  sendEmail(url, data) {
+  sendEmail(url: any, data: any) {
     return this.http.post(url, data);
   }
 }

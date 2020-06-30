@@ -8,6 +8,11 @@
   padding-bottom: 50px;
 }
 
+.disabledbutton {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 .smallText {
   text-align: center;
   font-size: 15px;
