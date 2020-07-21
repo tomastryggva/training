@@ -24,14 +24,21 @@
                   </mat-radio-button>
                 </mat-radio-group>
                 <div class="askrift" *ngIf="maeling === 'með mælingu'">
-                  Þú hefur valið áskrift <b>{{ maeling }}</b
-                  ><br />
-                  <del style="color: red;">
-                    <b style="color: #1d6734; padding-right: 5px;"
-                      >17.000 kr.-</b
-                    >
-                  </del>
-                  <b style="color: #1d6734;">13.600kr</b>
+                  <div class="disabledbutton">
+                    Þú hefur valið áskrift <b>{{ maeling }}</b>
+                    <br />
+                  </div>
+                  <div class="disabledbutton">
+                    <del style="color: red;">
+                      <b style="color: #1d6734; padding-right: 5px;"
+                        >17.000 kr.-</b
+                      >
+                    </del>
+                    <b style="color: #1d6734;">13.600kr</b>
+                  </div>
+                  <b style="color: black;"
+                    >Tímabundið er ekki hægt að velja "með mælingu"</b
+                  >
                 </div>
                 <div class="askrift" *ngIf="maeling === 'án mælingu'">
                   Þú hefur valið áskrift <b>{{ maeling }}</b
@@ -302,7 +309,7 @@
         <div class="col-md-12">
           <object
             style="padding-top: 60px; border: 0; height: 500px; width: 100%;"
-            data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.9350516946408!2d-21.881000083473733!3d64.14508518359455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674ea917b6645%3A0xd45bed37d4c41289!2sWorld%20Class!5e0!3m2!1sen!2sis!4v1580862479850!5m2!1sen!2sis"
+            data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111402.61240808379!2d-21.99252264156403!3d64.13342312733178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674b9eedcedc3%3A0xec912ca230d26071!2sReykjav%C3%ADk!5e0!3m2!1sen!2sis!4v1594136664730!5m2!1sen!2sis"
           ></object>
         </div>
       </div>
