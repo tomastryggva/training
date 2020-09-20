@@ -62,7 +62,7 @@
     /* Back Top Link active
     ========================================================*/
     var offset = 200;
-    var duration = 500;
+    var duration = 700;
     $(window).scroll(function () {
       if ($(this).scrollTop() > offset) {
         $(".back-to-top").fadeIn(400);

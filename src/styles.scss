@@ -138,6 +138,9 @@ button:focus {
   background: #d6274d;
 }
 
+.testing {
+  color: #1d6734;
+}
 /* ScrollToTop */
 a.back-to-top {
   display: none;
@@ -230,7 +233,6 @@ a.back-to-top:focus {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
 
 .services {
   padding-top: 30px;
@@ -405,7 +407,7 @@ a.back-to-top:focus {
   box-sizing: border-box;
 }
 .slicknav_menu ul {
-  background: rgb(189, 189, 189);
+  background: rgb(0, 0, 0);
 }
 .slicknav_menu * {
   box-sizing: border-box;

@@ -1,3 +1,15 @@
+li a {
+  color: #1d6734;
+  padding-left: 40%;
+  font-weight: 700;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 3s;
+}
 .hero-area-bg {
   background-size: cover;
 }
