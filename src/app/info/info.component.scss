@@ -66,6 +66,7 @@ p {
 ul,
 ol {
   list-style: outside none none;
+  padding-top: 100px;
   margin: 0;
 }
 
@@ -101,6 +102,14 @@ ol li {
 @media screen and (max-width: 320px) {
   .container {
     width: 100%;
+  }
+
+  ul,
+  ol {
+    list-style: outside none none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
   }
 
   .about,
@@ -215,6 +224,14 @@ ol li {
     width: 100%;
   }
 
+  ul,
+  ol {
+    list-style: outside none none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
   .about,
   .services,
   .resume,
@@ -327,6 +344,14 @@ ol li {
     width: 100%;
   }
 
+  ul,
+  ol {
+    list-style: outside none none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
   .about,
   .services,
   .resume,
@@ -437,6 +462,14 @@ ol li {
 @media screen and (min-width: 415px) and (max-width: 768px) {
   .container {
     width: 100%;
+  }
+
+  ul,
+  ol {
+    list-style: outside none none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
   }
 
   .about,
